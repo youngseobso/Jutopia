@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cbd1ccc028bfb9e310d9888891d8052ec884eee97028afcf7d77efe4244f087f
-size 67
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
