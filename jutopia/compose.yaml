@@ -1,0 +1,19 @@
+services:
+  discovery-server:
+    image: discovery-server:1.0
+    ports:
+    - "8761"
+  apigateway-server:
+    image: apigateway-server:1.0
+    ports:
+    - "8081"
+  config-server:
+    image: config-server:1.0
+    ports:
+    - "8082"
+  news-server:
+    image: fastapi:0.0.1
+    ports:
+    - "8083"
+  # jenkins/jenkins:
+  #   image: jenkins/jenkins:lts-jdk17
