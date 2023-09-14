@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:27413429843eb860d8a83c9cf98706eb2ba7fc2d6c63ca5705bf5b2ce60f5a1f
-size 117
+spring:
+  application:
+    name: apigateway-server
+  config:
+    import: optional:configserver:http://localhost:8888
