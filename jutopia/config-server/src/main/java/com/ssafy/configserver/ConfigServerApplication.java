@@ -1,15 +1,3 @@
-package com.ssafy.configserver;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.config.server.EnableConfigServer;
-
-@SpringBootApplication
-@EnableConfigServer
-public class ConfigServerApplication {
-
-    public static void main(String[] args) {
-        SpringApplication.run(ConfigServerApplication.class, args);
-    }
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:214899efc4e6d1b86e7a058297dce5b7da0461feb74fcae2ef91556d405827ce
+size 517
