@@ -1,14 +1,3 @@
-server:
-  port: 8888
-spring:
-  application:
-    name: config-server
-  profiles:
-    active:
-      - native
-  cloud:
-    config:
-      server:
-        native:
-          search-locations: classpath:/config
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:f9093697a03cb0ea12d41ad9696c037eacaf9b5a3d18837797a6dcd882fbbc43
+size 294
