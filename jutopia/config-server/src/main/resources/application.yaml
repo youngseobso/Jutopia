@@ -1,8 +1,15 @@
 server:
   port: 8888
+
 spring:
   application:
     name: config-server
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
   profiles:
     active:
       - native
@@ -11,4 +18,5 @@ spring:
       server:
         native:
           search-locations: classpath:/config
-
+        git:
+          uri: https://lab.ssafy.com/hans52410537/jutopia_cloud_config
