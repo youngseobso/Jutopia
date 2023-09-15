@@ -18,5 +18,12 @@ spring:
     username: guest
     password: guest
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, httptrace, busrefresh
+
+
 
 
