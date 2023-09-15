@@ -18,4 +18,5 @@ spring:
       server:
         native:
           search-locations: classpath:/config
-
+        git:
+          uri: https://lab.ssafy.com/hans52410537/jutopia_cloud_config
