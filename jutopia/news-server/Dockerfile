@@ -6,6 +6,6 @@ COPY ./requirements.txt ./requirements.txt
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 50000
+EXPOSE 8080
 
-CMD ["uvicorn", "main:app", "--port=50000"]
+CMD ["uvicorn", "main:app", "--port=8080"]
