@@ -10,19 +10,20 @@ spring:
     username: guest
     password: guest
 
-  profiles:
-    active:
-      - native
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:/config
         git:
-          uri: https://lab.ssafy.com/hans52410537/jutopia_cloud_config
+          uri: https://github.com/hans0537/jutopia_cloud_config
 
 management:
   endpoints:
     web:
       exposure:
         include: health, busrefresh
+
+encrypt:
+  key-store:
+    location: file:/apiEncryptionKey.jks
+    password: test1234
+    alias: apiEncryptionKey

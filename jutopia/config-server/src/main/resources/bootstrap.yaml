@@ -1,7 +1,0 @@
-encrypt:
-# 비대칭키: 암호화, 복호화 키가 동일 X
-# RSA 알고리즘
-  key-store:
-    location: file:/apiEncryptionKey.jks
-    password: test1234
-    alias: apiEncryptionKey

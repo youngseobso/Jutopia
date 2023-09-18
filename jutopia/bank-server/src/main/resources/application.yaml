@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:31daa7b6a1ce3f134206d86ee6db4473ef4b566b3e9ebe7bafb007acd3611ca6
-size 1247
+server:
+  port: 0
+
+spring:
+  application:
+    name: bank-service
+  profiles:
+    active: local     # 애플리케이션 환경 = local, dev
+  config:
+    import: optional:bankserver:http://localhost:8888 # import:optional:configserver사용 -> Spring cloud config server 주소
+
+
