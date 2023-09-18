@@ -1,4 +1,3 @@
-rootProject.name = 'jutopia'
-include 'apigateway-server'
-include 'config-server'
-include 'discovery-server'
+version https://git-lfs.github.com/spec/v1
+oid sha256:db50ffb0a83e230edd4992409b85396e955189bd913306200f1599c22734c4e4
+size 146
