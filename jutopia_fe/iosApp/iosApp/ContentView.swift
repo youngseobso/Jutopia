@@ -1,16 +1,3 @@
-import SwiftUI
-import shared
-
-struct ContentView: View {
-	let greet = Greeting().greet()
-
-	var body: some View {
-		Text(greet)
-	}
-}
-
-struct ContentView_Previews: PreviewProvider {
-	static var previews: some View {
-		ContentView()
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:331709702943f38c73cc31a5ecb15da514960c87c10b13f7ee2df9ce28f7c60d
+size 234

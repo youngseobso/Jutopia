@@ -1,10 +1,3 @@
-*.iml
-.gradle
-.idea
-.DS_Store
-build
-captures
-.externalNativeBuild
-.cxx
-local.properties
-xcuserdata
+version https://git-lfs.github.com/spec/v1
+oid sha256:83fe6c95a405991d196da553c95fbe49ca25dc0db0daa6ab5d84538c3e2a2870
+size 98
