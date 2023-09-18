@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5a1ad20d26ecec9650774e48f0b50a02513086ee42e0ff6bd1fba35ef8edbc7d
-size 463
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+  profiles:
+    active:
+      - native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+        git:
+          uri: https://lab.ssafy.com/hans52410537/jutopia_cloud_config
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh

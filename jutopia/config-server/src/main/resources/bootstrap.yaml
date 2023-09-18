@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5f2cfaf50bea5d0f52041f77469ef7436c586caf254c38ae475db78c328d4488
-size 185
+encrypt:
+# 비대칭키: 암호화, 복호화 키가 동일 X
+# RSA 알고리즘
+  key-store:
+    location: file:/apiEncryptionKey.jks
+    password: test1234
+    alias: apiEncryptionKey

@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ffd72183e11ba20377094817c3ce51b1d521eb33411f50841d9cec0e0dfea458
-size 85
+spring:
+  cloud:
+    config:
+      uri: http://127.0.0.1:8888
+      name: bank-server
