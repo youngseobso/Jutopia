@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d7cee1cc551f8417b18d1c43f2a94d3a8994efc9f6f8211522b59701f9fe73cc
-size 386
+plugins {
+    //trick: for the same plugin versions in all sub-modules
+    id("com.android.application").version("8.1.1").apply(false)
+    id("com.android.library").version("8.1.1").apply(false)
+    kotlin("android").version("1.8.21").apply(false)
+    kotlin("multiplatform").version("1.8.21").apply(false)
+}
+
+tasks.register("clean", Delete::class) {
+    delete(rootProject.buildDir)
+}
