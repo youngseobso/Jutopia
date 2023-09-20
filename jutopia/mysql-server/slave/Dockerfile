@@ -1,2 +1,2 @@
 FROM mysql:8.0.17
-ADD ./master/my.cnf /etc/mysql/my.cnf
+ADD ./slave/my.cnf /etc/mysql/my.cnf
