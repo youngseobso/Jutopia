@@ -1,15 +1,3 @@
-package com.ssafy.rentserver;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-
-@SpringBootApplication
-@EnableDiscoveryClient
-public class RentServerApplication {
-
-    public static void main(String[] args) {
-        SpringApplication.run(RentServerApplication.class, args);
-    }
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f7c952cc2cc771929f48a724e5b296029720933f36aa03e31315e94d7a324337
+size 608
