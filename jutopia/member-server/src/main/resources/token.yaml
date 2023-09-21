@@ -1,0 +1,4 @@
+secret-key: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.e2j7Ce8HktDD53o-CNTRXh8wfwz-jPREJOPmTPtx5yzb4Ipcwh6-P5QE3RRIcKYyLhq010Q0PdSaF5FFuthJaw
+expiration-minutes: 30
+issuer: test
+refreshExpirationMillis: 30
