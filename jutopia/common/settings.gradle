@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:69adf8db688993a56bebe9c4d0eddbe1a027dbb27b72dffa80c19292a1616bda
-size 28
+rootProject.name = 'common'

@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:67fee01318b04fb3b63019087beb96679da9dbd6d6f2b01c1fb125654a5212a2
-size 409
+package com.ssafy.bankserver.jpa;
+
+import org.springframework.data.domain.Example;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+
+import java.util.List;
+import java.util.UUID;
+
+public interface BankRepository extends CrudRepository<BankEntity, Long> {
+    Iterable<BankEntity> findAll();
+    BankEntity findByClassId(UUID classId);
+}
