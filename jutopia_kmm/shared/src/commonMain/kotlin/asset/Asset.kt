@@ -1,14 +1,15 @@
 package asset
 
-import androidx.compose.material.Button
-import androidx.compose.material.Text
+import BottomTabBar
+import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
+import common.TopPageBar
 import moe.tlaster.precompose.navigation.Navigator
 
 @Composable
 fun Asset(navigator: Navigator) {
-    Text(text = "Asset")
-    Button(onClick = {navigator.navigate("/home")}) {
-        Text("gogo")
+    Column {
+        TopPageBar("자산")
+        BottomTabBar(navigator)
     }
 }

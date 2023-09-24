@@ -1,14 +1,15 @@
 package school
 
-import androidx.compose.material.Button
-import androidx.compose.material.Text
+import BottomTabBar
+import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
+import common.TopPageBar
 import moe.tlaster.precompose.navigation.Navigator
 
 @Composable
 fun School(navigator: Navigator) {
-    Text(text = "School")
-    Button(onClick = {navigator.navigate("/home")}) {
-        Text("gogo")
+    Column {
+        TopPageBar("학교")
+        BottomTabBar(navigator)
     }
 }
