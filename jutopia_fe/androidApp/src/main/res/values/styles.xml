@@ -1,3 +1,3 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:51a37ddc551282d2b8ec0d011bf2efa7998e8f413389d5df2de5d08567a8336c
-size 90
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar"/>
+</resources>
