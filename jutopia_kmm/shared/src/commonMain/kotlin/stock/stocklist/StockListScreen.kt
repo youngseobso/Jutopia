@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a0a65157f39fba2f56ff43c13c807e37552a351693359eab515c71b3f3f8dd16
-size 395
+package stock.stocklist
+
+import BottomTabBar
+import androidx.compose.foundation.layout.Column
+import androidx.compose.runtime.Composable
+import common.TopPageBar
+import lease.LeasePage
+import moe.tlaster.precompose.navigation.Navigator
+
+@Composable
+fun StockListScreen(navigator: Navigator) {
+    Column {
+        TopPageBar("주식")
+        StockListPage()
+    }
+    BottomTabBar(navigator)
+}
