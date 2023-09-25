@@ -1,14 +1,3 @@
-package com.ssafy.apigatewayserver;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-
-@SpringBootApplication
-public class ApigatewayServerApplication {
-
-    public static void main(String[] args) {
-        SpringApplication.run(ApigatewayServerApplication.class, args);
-    }
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b5cec19264308aaa517eb736d476dc8327823b45ec54cf848e9925a61e4d8b8a
+size 403
