@@ -1,0 +1,25 @@
+
+spring:
+  application:
+    name: rent-server
+  cloud:
+    config:
+      uri: http://j9c108.p.ssafy.io:8888
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://j9c108.p.ssafy.io:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.ssafy: DEBUG
+
+server:
+  port: 8050
