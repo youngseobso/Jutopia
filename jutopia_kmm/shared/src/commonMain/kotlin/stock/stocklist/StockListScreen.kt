@@ -10,7 +10,7 @@ import moe.tlaster.precompose.navigation.Navigator
 @Composable
 fun StockListScreen(navigator: Navigator) {
     Column {
-        TopPageBar("주식")
+        TopPageBar("주식", navigator)
         StockListPage()
     }
     BottomTabBar(navigator)

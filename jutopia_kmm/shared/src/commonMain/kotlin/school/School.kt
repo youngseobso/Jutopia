@@ -9,7 +9,7 @@ import moe.tlaster.precompose.navigation.Navigator
 @Composable
 fun School(navigator: Navigator) {
     Column {
-        TopPageBar("학교")
+        TopPageBar("학교", navigator, showReturn = false)
         BottomTabBar(navigator)
     }
 }
