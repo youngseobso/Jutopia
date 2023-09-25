@@ -1,15 +1,3 @@
-package school
-
-import BottomTabBar
-import androidx.compose.foundation.layout.Column
-import androidx.compose.runtime.Composable
-import common.TopPageBar
-import moe.tlaster.precompose.navigation.Navigator
-
-@Composable
-fun School(navigator: Navigator) {
-    Column {
-        TopPageBar("학교")
-        BottomTabBar(navigator)
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7ff9ea2559207da11b6729c6ee4cf19865c0e2737dc12f2f938cb0e441c99250
+size 364
