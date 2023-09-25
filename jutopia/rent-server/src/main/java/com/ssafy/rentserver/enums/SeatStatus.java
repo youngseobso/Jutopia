@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1cdc85f586d721f2f16c22b4db683c5bd71ac2056187a30fe55394831bfb4bc2
-size 269
+package com.ssafy.rentserver.enums;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+public enum SeatStatus {
+    AVAILABLE("사용가능"),
+    UNAVAILABLE("사용불가"),
+    INUSE("사용중"),
+    DELETED("삭제");
+
+    private final String description;
+}
