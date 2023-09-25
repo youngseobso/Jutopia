@@ -1,11 +1,3 @@
-package com.ssafy.jutopia.android
-
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-
-class BankActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bank)
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eba1fd17029e6fad3832da3828a96f65101a7e26028ae0934d0193d60b3b2d1e
+size 1000
