@@ -1,16 +1,3 @@
-package com.ssafy.classserver.vo.response;
-
-import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.Data;
-
-import java.math.BigDecimal;
-
-@Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
-public class ResponseProduct {
-    private String bankName;
-    private double interestRate;
-    private BigDecimal maxMoney;
-    private BigDecimal minMoney;
-    private Short term;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:93ec830792a0e9dd88386a6258fab48434d20ccea8efe9686a3a51bdb759c0ad
+size 381
