@@ -1,7 +1,3 @@
-import androidx.compose.ui.graphics.Color
-
-object Variables {
-    val ColorsPrimary: Color = Color(0xFF5D7DD4)
-    val ColorsOnPrimary: Color = Color(0xFFFFFFFF)
-    val ColorsBackground: Color = Color(0xFFFFFFFF)
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:355f08e1289b0502f1563755e84eaaf6b25dabafb8e42cb726d6b8550e579973
+size 215
