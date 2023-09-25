@@ -1,7 +1,8 @@
 encrypt:
-# 비대칭키: 암호화, 복호화 키가 동일 X
-# RSA 알고리즘
   key-store:
-    location: file:/apiEncryptionKey.jks
-    password: test1234
+#   로컬 key 위치
+    location: file:${user.dir}/apiEncryptionKey.jks
+    # 컨테이너 내부
+#    location: file:/apiEncryptionKey.jks
+    password: jutopia1234
     alias: apiEncryptionKey
