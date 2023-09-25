@@ -6,4 +6,3 @@ while true; do
     fi
     rsync -av /var/lib/docker/containers/*/*.log /home/ubuntu/S09P22C108/jutopia/shared/logs/
 done
-
