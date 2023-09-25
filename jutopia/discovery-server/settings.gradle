@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:af6829b8e9373309b903e7e72bf9b10f4d0abe1d9a925a08179c55b97705df70
-size 38
+rootProject.name = 'discovery-server'
