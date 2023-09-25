@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:18639c5a7e58b6ae8e9f4aa5f7df98c930611e2b002d114d374eb722d2c60df6
-size 314
+<resources>
+    <declare-styleable name="ui">
+        <attr name="exampleString" format="string" />
+        <attr name="exampleDimension" format="dimension" />
+        <attr name="exampleColor" format="color" />
+        <attr name="exampleDrawable" format="color|reference" />
+    </declare-styleable>
+</resources>

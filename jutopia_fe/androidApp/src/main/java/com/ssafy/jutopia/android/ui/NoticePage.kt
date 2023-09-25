@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1b3ac3106ece1f64c458a5fb226b21262aea984b35c8b63b6832c9785314eefc
-size 186
+package com.ssafy.jutopia.android.ui
+
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+
+@Composable
+fun NoticePage(){
+    Text(text = "공지페이지")
+}
