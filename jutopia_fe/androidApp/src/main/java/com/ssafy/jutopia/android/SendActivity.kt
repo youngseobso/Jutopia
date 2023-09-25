@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:90a8a7e23a279552dfad92fa51b4779b541f99c9ffe5dcc9317a9e090cb67393
-size 306
+package com.ssafy.jutopia.android
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
+class SendActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_send)
+    }
+}

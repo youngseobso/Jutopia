@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:804861f75c99c14ece7488d86f9115a51be3ce88f0298599d8529870d48ec918
-size 220
+package home
+
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+import moe.tlaster.precompose.navigation.Navigator
+
+@Composable
+fun Notice(navigator: Navigator) {
+    Text("공지사항")
+}
