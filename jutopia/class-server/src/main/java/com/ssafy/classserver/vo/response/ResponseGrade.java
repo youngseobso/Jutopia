@@ -1,15 +1,3 @@
-package com.ssafy.classserver.vo.response;
-
-import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.Data;
-
-import java.math.BigDecimal;
-import java.util.UUID;
-@Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
-public class ResponseGrade {
-    private UUID id;
-    private int gradeNum;
-    private BigDecimal gradeAccountPoint;
-    private BigDecimal gradeAccountInitPoint;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d511c40e380379c046a96abbc6f33419254ccd88f9db5b3acaa2a95d8a7162b1
+size 517

@@ -7,5 +7,5 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.UUID;
 
 public interface SavingProductsRepository extends JpaRepository<SavingProductsEntity, UUID> {
-
+    Iterable<SavingProductsEntity> findAllByClassroomId(UUID classroomId);
 }

@@ -1,5 +1,6 @@
 package com.ssafy.classserver.dto;
 
+import com.ssafy.classserver.vo.response.ResponseClassRoom;
 import com.ssafy.classserver.vo.response.ResponseGrade;
 import lombok.Data;
 
@@ -14,4 +15,5 @@ public class SchoolDto {
     private String region;
 
     private List<ResponseGrade> grades;
+    private List<ResponseClassRoom> classRooms;
 }
