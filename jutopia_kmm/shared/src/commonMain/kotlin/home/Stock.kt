@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:37e6345627c233b2448b858798323b3cf3d310cb18e5ec98d17c3aca64d41cb7
-size 213
+package home
+
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+import moe.tlaster.precompose.navigation.Navigator
+
+@Composable
+fun Stock(navigator: Navigator) {
+    Text("주식")
+}
