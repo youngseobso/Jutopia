@@ -1,4 +1,4 @@
-package lease
+package school
 
 import BottomTabBar
 import androidx.compose.foundation.layout.Column
@@ -7,11 +7,16 @@ import common.TopPageBar
 import moe.tlaster.precompose.navigation.Navigator
 
 @Composable
-fun LeaseScreen(navigator: Navigator) {
+fun NotiContents(navigator: Navigator, idx: Int) {
     Column {
-        TopPageBar("임대", navigator)
-        LeasePage()
+        TopPageBar("공지사항 상세", navigator)
+
+
     }
     BottomTabBar(navigator)
 }
 
+@Composable
+fun Contents() {
+
+}
