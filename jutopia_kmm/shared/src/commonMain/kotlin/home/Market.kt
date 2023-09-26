@@ -7,5 +7,5 @@ import moe.tlaster.precompose.navigation.Navigator
 
 @Composable
 fun Market(navigator: Navigator) {
-    TopPageBar("상점")
+    TopPageBar("상점", navigator=navigator)
 }

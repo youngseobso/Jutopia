@@ -1,1 +1,3 @@
 rootProject.name = 'stock-server'
+include ':common'
+project(':common').projectDir = new File(settingsDir, '../common')
