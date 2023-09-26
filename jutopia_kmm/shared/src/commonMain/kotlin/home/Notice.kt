@@ -10,7 +10,7 @@ import moe.tlaster.precompose.navigation.Navigator
 @Composable
 fun Notice(navigator: Navigator) {
     Column {
-        TopPageBar("공지사항")
+        TopPageBar("공지사항", navigator=navigator)
     }
     BottomTabBar(navigator)
 

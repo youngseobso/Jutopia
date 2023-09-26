@@ -9,7 +9,7 @@ import moe.tlaster.precompose.navigation.Navigator
 @Composable
 fun LeaseScreen(navigator: Navigator) {
     Column {
-        TopPageBar("임대")
+        TopPageBar("임대", navigator)
         LeasePage()
     }
     BottomTabBar(navigator)

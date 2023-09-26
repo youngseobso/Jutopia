@@ -10,7 +10,7 @@ import moe.tlaster.precompose.navigation.Navigator
 @Composable
 fun Trade(navigator: Navigator) {
     Column {
-        TopPageBar("환전")
+        TopPageBar("환전", navigator=navigator)
     }
     BottomTabBar(navigator)
 }
