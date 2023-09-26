@@ -7,5 +7,5 @@ import moe.tlaster.precompose.navigation.Navigator
 
 @Composable
 fun Rent(navigator: Navigator) {
-    TopPageBar("임대")
+    TopPageBar("임대", navigator=navigator)
 }
