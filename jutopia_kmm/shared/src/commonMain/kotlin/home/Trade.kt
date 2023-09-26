@@ -14,3 +14,4 @@ fun Trade(navigator: Navigator) {
     }
     BottomTabBar(navigator)
 }
+
