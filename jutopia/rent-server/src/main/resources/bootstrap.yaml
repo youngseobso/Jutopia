@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:51297dbf07a6d1452ff3a22af5bf6325c046d90db21c59e59f711f1da4f04640
-size 487
+server:
+  port: 0
+
+spring:
+  application:
+    name: rent-server
+  cloud:
+    config:
+      uri: http://127.0.0.1:8888
+      name: rent-server
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.ssafy: DEBUG
+
+
