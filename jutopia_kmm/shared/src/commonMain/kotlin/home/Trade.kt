@@ -1,17 +1,3 @@
-package home
-
-import BottomTabBar
-import androidx.compose.foundation.layout.Column
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import common.TopPageBar
-import moe.tlaster.precompose.navigation.Navigator
-
-@Composable
-fun Trade(navigator: Navigator) {
-    Column {
-        TopPageBar("환전", navigator=navigator)
-    }
-    BottomTabBar(navigator)
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:da19ed31348796601d18f2afc71e01ba3b129a5f11e61b979d0971948e490110
+size 11775
