@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:674f952a2fb28c61b1930f26da43bbed0d5db8da78c864286cbbe46430d64ef2
-size 327
+#!/bin/bash
+while true; do
+    inotifywait -e modify /var/lib/docker/containers/*/*.log 2>>/tmp/inotify_errors.log
+    if [ $? -ne 0 ]; then
+        echo "inotifywait exited with error code $?" >> /tmp/inotify_errors.log
+    fi
+    rsync -av /var/lib/docker/containers/*/*.log /home/ubuntu/S09P22C108/jutopia/shared/logs/
+done
