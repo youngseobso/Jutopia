@@ -6,5 +6,5 @@ import moe.tlaster.precompose.navigation.Navigator
 
 @Composable
 fun Stock(navigator: Navigator) {
-    Text("주식")
+    navigator.navigate("/stocklist")
 }
