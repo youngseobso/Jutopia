@@ -1,13 +1,3 @@
-package news
-
-import BottomTabBar
-import androidx.compose.foundation.layout.Column
-import androidx.compose.runtime.Composable
-import moe.tlaster.precompose.navigation.Navigator
-
-@Composable
-fun News(navigator: Navigator) {
-    Column {
-        BottomTabBar(navigator)
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e799ccd1947860186b5f6353051bb53b87fdb0c04dba26ef305b3ebfb0393416
+size 5911
