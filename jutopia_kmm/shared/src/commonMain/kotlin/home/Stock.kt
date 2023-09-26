@@ -1,12 +1,3 @@
-package home
-
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import common.TopPageBar
-import moe.tlaster.precompose.navigation.Navigator
-
-@Composable
-fun Stock(navigator: Navigator) {
-    TopPageBar("주식", navigator=navigator)
-    navigator.navigate("/stocklist")
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eb1011e5fefb467b51705100e63a60bdb5cf1d15c239868faf72a7d92652a4b3
+size 302
