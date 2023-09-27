@@ -1,8 +1,8 @@
 encrypt:
   key-store:
 #   로컬 key 위치
-    location: file:${user.dir}/apiEncryptionKey.jks
+    # location: file:${user.dir}/apiEncryptionKey.jks
     # 컨테이너 내부
-#    location: file:/apiEncryptionKey.jks
+    location: file:/apiEncryptionKey.jks
     password: jutopia1234
     alias: apiEncryptionKey

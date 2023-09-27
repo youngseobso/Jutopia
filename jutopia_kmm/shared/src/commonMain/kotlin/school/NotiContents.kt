@@ -1,22 +1,3 @@
-package school
-
-import BottomTabBar
-import androidx.compose.foundation.layout.Column
-import androidx.compose.runtime.Composable
-import common.TopPageBar
-import moe.tlaster.precompose.navigation.Navigator
-
-@Composable
-fun NotiContents(navigator: Navigator, idx: Int) {
-    Column {
-        TopPageBar("공지사항 상세", navigator)
-
-
-    }
-    BottomTabBar(navigator)
-}
-
-@Composable
-fun Contents() {
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:554cc047c47c6b90f28e9d92a6e9a357f08dd6f68f161a4ca5cbe9524b007630
+size 3210
