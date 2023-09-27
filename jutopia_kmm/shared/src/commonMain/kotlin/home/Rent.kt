@@ -1,10 +1,3 @@
-package home
-
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import moe.tlaster.precompose.navigation.Navigator
-
-@Composable
-fun Rent(navigator: Navigator) {
-    Text("임대")
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0671e18922aa3c9696050ffb42981a37b9200f24fe30eda9f7f8b8a0344fa446
+size 245
