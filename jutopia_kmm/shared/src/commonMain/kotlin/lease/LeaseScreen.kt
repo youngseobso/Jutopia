@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f0295a109cabe5c3f8f1356b68f34a7dadb1de89a50600d130c0e64e3cc9ce6f
-size 366
+package lease
+
+import BottomTabBar
+import androidx.compose.foundation.layout.Column
+import androidx.compose.runtime.Composable
+import common.TopPageBar
+import moe.tlaster.precompose.navigation.Navigator
+
+@Composable
+fun LeaseScreen(navigator: Navigator) {
+    Column {
+        TopPageBar("임대", navigator)
+        LeasePage()
+    }
+    BottomTabBar(navigator)
+}
+
