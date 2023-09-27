@@ -1,12 +1,3 @@
-package com.ssafy.memberserver.domain.notice.dto.request;
-
-import java.time.LocalDateTime;
-
-public record NoticeUpdateRequest(
-        String title,
-        String newTitle,
-        String content,
-        String newContent,
-        LocalDateTime updatedAt
-) {
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e85dda997a4f53e885b52b74d66bc0e827d83da8a3aa77786b439981e33a0809
+size 263
