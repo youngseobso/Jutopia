@@ -1,24 +1,3 @@
-package com.ssafy.stockserver.domain.trading.entity;
-
-import jakarta.persistence.*;
-import lombok.*;
-
-import java.math.BigDecimal;
-import java.time.LocalTime;
-
-@AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Getter
-@Builder
-@Entity
-public class Trading {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private BigDecimal price;
-    private LocalTime tradeAt;
-
-    //@ManyToOne
-    //    private Student student;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a3206cf9a02148a103b26f3dde85ec88e5d7f115a1e83d4544c37ba644bb5bab
+size 720
