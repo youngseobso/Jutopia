@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:698f0b27f76e8c2a698f01d376f91e8f145261cacddc2c5c1b20421bf028e92a
-size 337
+package com.ssafy.stockserver.domain.trading.repository;
+
+import com.ssafy.stockserver.domain.stock.entity.Stock;
+import com.ssafy.stockserver.domain.trading.entity.Trading;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.UUID;
+
+public interface TradingRepository extends JpaRepository<Trading, UUID> {
+}

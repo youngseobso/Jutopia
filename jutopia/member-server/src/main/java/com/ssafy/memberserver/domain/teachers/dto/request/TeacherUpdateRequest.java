@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aee0a2b36df4d313a72dc069676517b1492b84cec8637e2fd5a076a834c54bdc
-size 242
+package com.ssafy.memberserver.domain.teachers.dto.request;
+
+public record TeacherUpdateRequest(
+        String teacherId,
+        String teacherPwd,
+        String teacherNewPwd,
+        String teacherName,
+        String teacherEmail
+) {
+}
