@@ -1,17 +1,3 @@
-package chatbot
-
-import BottomTabBar
-import androidx.compose.foundation.layout.Column
-import androidx.compose.runtime.Composable
-import common.TopPageBar
-import moe.tlaster.precompose.navigation.Navigator
-
-@Composable
-fun ChatbotScreen(navigator: Navigator) {
-    Column {
-        TopPageBar("임대", navigator = navigator)
-        ChatbotPage()
-    }
-    BottomTabBar(navigator)
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:8d3a09b245babf79e53f1a0516b33af9f6e9ebc34606690609c0d9acde8fc697
+size 664
