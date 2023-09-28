@@ -1,3 +1,3 @@
-rootProject.name = 'member-server'
-include ':common'
-project(':common').projectDir = new File(settingsDir, '../common')
+version https://git-lfs.github.com/spec/v1
+oid sha256:72c6b6d8c8a5a1cb27eb41c9e7b19d3bd0e46ba19b4d299c6c925b107bf8c8ee
+size 119

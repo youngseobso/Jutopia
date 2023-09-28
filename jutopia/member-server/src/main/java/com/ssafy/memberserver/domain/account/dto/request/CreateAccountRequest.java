@@ -1,16 +1,3 @@
-package com.ssafy.memberserver.domain.account.dto.request;
-
-import com.ssafy.memberserver.common.enums.AccountStatus;
-import com.ssafy.memberserver.common.enums.AccountType;
-import com.ssafy.memberserver.domain.students.entity.Student;
-
-import java.util.UUID;
-
-public record CreateAccountRequest(
-        String accountName,
-        String accountNumber,
-        AccountType accountType,
-        AccountStatus accountStatus,
-        UUID studentId
-) {
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9efab18284cb9939f8230820af98c594f854d142662bcd9d01ea4f6a5b4c9431
+size 454

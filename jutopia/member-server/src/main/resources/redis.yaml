@@ -1,13 +1,3 @@
-spring:
-  cache:
-    type: redis
-    redis:
-      time-to-live: 3600
-      cache-null-values: true
-      host: j9c108.p.ssafy.io
-      port: 46379
-#spring.cache.type=redis
-#spring.cache.redis.time-to-live=3600
-#spring.cache.redis.cache-null-values=true
-#spring.cache.redis.host=localhost
-#spring.cache.redis.port=6379
+version https://git-lfs.github.com/spec/v1
+oid sha256:82c329d1653831e8ed5dc5d6f03527c2ff87b6a1c685d866c0eca7fccec26698
+size 318

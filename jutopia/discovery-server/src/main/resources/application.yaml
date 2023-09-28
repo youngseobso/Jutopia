@@ -1,13 +1,3 @@
-server:
-  port: 8761
-spring:
-  application:
-    name: discovery-server
-  cloud:
-    config:
-      uri: http://127.0.0.1:8888
-      name: jutopia
-eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
+version https://git-lfs.github.com/spec/v1
+oid sha256:2dd44dddc2384ac1dd369db4d98456e71a6b4abf4e5c54d9459ab1658e49767d
+size 221

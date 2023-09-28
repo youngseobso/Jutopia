@@ -1,5 +1,3 @@
-spring:
-  cloud:
-    config:
-      uri: http://127.0.0.1:8888
-      name: member-server
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef9975caf52a100fc29b775b063426c10bf2e02a274754c53cc1bd618d3fe7fe
+size 88

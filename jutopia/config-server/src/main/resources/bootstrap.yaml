@@ -1,8 +1,3 @@
-encrypt:
-  key-store:
-#   로컬 key 위치
-#    location: file:${user.dir}/apiEncryptionKey.jks
-    # 컨테이너 내부
-    location: file:/apiEncryptionKey.jks
-    password: jutopia1234
-    alias: apiEncryptionKey
+version https://git-lfs.github.com/spec/v1
+oid sha256:799f5970b6b4ab9c6d72c87c2dc8d415989c40466ad5504e799ac782dc56623d
+size 218

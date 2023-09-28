@@ -1,9 +1,3 @@
-package school
-
-import moe.tlaster.precompose.viewmodel.ViewModel
-
-class NotiContentsViewModel(private val idx: Int): ViewModel() {
-    private val _notice: noticeDetail = noticeDetail("칠판당번 공지", "금주의 칠판당번은 xxx입니다", "2023.09.07", if (idx == 0) "10:00" else "10:59")
-
-    val notice: noticeDetail = _notice
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc0ac4eea86d1639507bdf15b52d9461b4233961857c76456e9713491edf33d3
+size 341
