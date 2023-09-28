@@ -1,14 +1,3 @@
-package com.ssafy.classserver;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-
-@SpringBootApplication
-@EnableDiscoveryClient
-public class ClassServerApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(ClassServerApplication.class, args);
-	}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:71ba4289ef58d2cbca5fcf548cdb67d225ac2c6eb62da29a7b1a8e0d0e600dc6
+size 957
