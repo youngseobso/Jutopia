@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9d4ad3bdaeb0ad2bb0595f1029bccd179f567a0a7a8ac2fa6a58f162f3732429
-size 306
+package com.ssafy.jutopia.android
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
+class SaveActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_save)
+    }
+}

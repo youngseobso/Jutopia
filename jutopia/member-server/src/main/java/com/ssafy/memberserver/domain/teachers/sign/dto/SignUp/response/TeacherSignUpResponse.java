@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:37bc72f97ccf085e68d356687850886b0e6a3db504cde34f9f3111f0ca4f259a
-size 442
+package com.ssafy.memberserver.domain.teachers.sign.dto.SignUp.response;
+
+import com.ssafy.memberserver.domain.teachers.entity.Teacher;
+
+public record TeacherSignUpResponse(
+        String teacherName,
+        String teacherEmail
+) {
+    public static TeacherSignUpResponse from(Teacher teacher){
+        return new TeacherSignUpResponse(
+                teacher.getTeacherName(),
+                teacher.getTeacherEmail()
+        );
+    }
+}
