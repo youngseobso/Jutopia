@@ -8,7 +8,13 @@ import java.util.UUID;
 
 @Data
 public class ProductDto implements Serializable {
-    private UUID bankId;
+    private UUID classroomId;
+
+    private String bankName;
+
+    private String productName;
+    private String productDetail;
+
     private double interestRate;
     private BigDecimal maxMoney;
     private BigDecimal minMoney;
