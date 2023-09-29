@@ -1,15 +1,3 @@
-package asset
-
-import BottomTabBar
-import androidx.compose.foundation.layout.Column
-import androidx.compose.runtime.Composable
-import common.TopPageBar
-import moe.tlaster.precompose.navigation.Navigator
-
-@Composable
-fun Asset(navigator: Navigator) {
-    Column {
-        TopPageBar("자산")
-        BottomTabBar(navigator)
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c548bc436aa8418295f845aa7b848d384a2d3657ff7ee05042a3524c589e2ae7
+size 3531

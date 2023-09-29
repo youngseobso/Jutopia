@@ -1,25 +1,3 @@
-
-spring:
-  application:
-    name: rent-server
-  cloud:
-    config:
-      uri: http://j9c108.p.ssafy.io:8888
-
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://j9c108.p.ssafy.io:8761/eureka/
-    register-with-eureka: true
-    fetch-registry: true
-
-
-logging:
-  level:
-    com.netflix: WARN
-    org.springframework.web: WARN
-    com.ssafy: DEBUG
-
-server:
-  port: 8050
+version https://git-lfs.github.com/spec/v1
+oid sha256:267ac1b7ada6fc8528f6bd07878c55719157cda95553b6c8c6d86049b66d7ddd
+size 797

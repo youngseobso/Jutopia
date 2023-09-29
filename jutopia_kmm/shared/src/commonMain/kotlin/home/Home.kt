@@ -1,22 +1,3 @@
-@file:OptIn(ExperimentalResourceApi::class)
-
-package home
-
-import BottomTabBar
-import androidx.compose.foundation.layout.Column
-import androidx.compose.runtime.Composable
-import common.TopPageBar
-import moe.tlaster.precompose.navigation.Navigator
-import org.jetbrains.compose.resources.ExperimentalResourceApi
-
-
-
-@Composable
-fun Home(navigator: Navigator) {
-    Column {
-        TopPageBar("홈")
-
-        BottomTabBar(navigator)
-    }
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:6508889d9a6f89548f2770fc7ea481667724a87274d957d71bc08e723e67a09e
+size 9032
