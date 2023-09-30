@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9f9ae033599d13457d4a08ca789c64d5549c7ef61fac11ebcb9807ebad03c129
-size 475
+package com.ssafy.memberserver.domain.account.dto.request;
+
+import com.ssafy.memberserver.common.enums.AccountStatus;
+import com.ssafy.memberserver.common.enums.MoneyType;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+public record ReceiveMoneyRequest(
+        String sender,
+        String receiver,
+        BigDecimal amount,
+        MoneyType moneyType,
+        AccountStatus accountStatus,
+        LocalDateTime createdAt,
+        String studentId
+) {
+}
