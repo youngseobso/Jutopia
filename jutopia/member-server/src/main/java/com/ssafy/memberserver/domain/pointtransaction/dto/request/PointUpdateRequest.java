@@ -1,13 +1,3 @@
-package com.ssafy.memberserver.domain.pointtransaction.dto.request;
-
-import com.ssafy.memberserver.common.enums.PointType;
-
-import java.math.BigDecimal;
-
-public record PointUpdateRequest(
-        String place,
-        BigDecimal deposit,
-        BigDecimal output,
-        PointType pointType
-){
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b0cfcac268241f72b97c129bfb069e2a78f46778e4344cb6709fca4c74019a3a
+size 298
