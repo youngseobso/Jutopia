@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:19e76e5e038337f3ebaeacfdd22a716dcd84c487e196d337e6ad8aee7a471454
-size 339
+package com.ssafy.stockserver.domain.stock.vo.request;
+
+import jakarta.validation.constraints.NotNull;
+import lombok.Data;
+
+@Data
+public class RequestStock {
+
+    @NotNull(message = "주식 코드를 설정하세요")
+    private String stockCode;
+    @NotNull(message = "주식 이름을 설정하세요")
+    private String stockName;
+}
