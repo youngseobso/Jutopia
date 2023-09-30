@@ -1,6 +1,6 @@
 FROM python:3.11
 
-COPY src/main.py ./main.py
+COPY src/ ./
 
 COPY requirements.txt ./requirements.txt
 
