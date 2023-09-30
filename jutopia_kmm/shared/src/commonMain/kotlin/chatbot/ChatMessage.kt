@@ -1,8 +1,15 @@
 package chatbot
 
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonNames
+
+@Serializable
 data class ChatMessage(
-    val id: String,
-    val content: String,
-    val timestamp: String,
-    val isFromBot: Boolean
+    val message: String,
+    @JsonNames("from_server")val fromServer: Boolean
+)
+
+@Serializable
+data class ChatRequest(
+    val message: String
 )
