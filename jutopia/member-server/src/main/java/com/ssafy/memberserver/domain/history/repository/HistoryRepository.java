@@ -1,12 +1,3 @@
-package com.ssafy.memberserver.domain.history.repository;
-
-import com.ssafy.memberserver.domain.history.entity.History;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
-
-public interface HistoryRepository extends JpaRepository<History,Long> {
-    List<History> findByAccountId(UUID accountId);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8a0a0b51a4c314a917dd3bf90d4110575f335b0d9b4b387cbb985133b45cb0a0
+size 707

@@ -1,12 +1,3 @@
-package com.ssafy.classserver.service;
-
-import com.ssafy.classserver.dto.ProductDto;
-import com.ssafy.classserver.jpa.entity.SavingProductsEntity;
-
-import java.util.UUID;
-
-public interface BankService {
-    ProductDto createProduct(ProductDto product);
-
-    Iterable<SavingProductsEntity> getAllProducts(UUID classroomId);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:32a540494531c381ae514a5072179de0a774c137c5fecb5f21de1b3ac4658aef
+size 670
