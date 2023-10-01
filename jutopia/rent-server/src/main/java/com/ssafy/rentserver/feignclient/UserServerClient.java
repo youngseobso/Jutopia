@@ -1,15 +1,3 @@
-package com.ssafy.rentserver.feignclient;
-
-import com.ssafy.common.api.Api;
-import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.PutMapping;
-
-import java.util.UUID;
-
-@FeignClient(name = "rent-server", url = "http://localhost:8001")
-public interface UserServerClient {
-
-    @PutMapping("/api...")
-    Api<?> reducePoint(); //userId와 point를 보내서 차감 결과를 리턴받는다.
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0ae60719d9bf64424790da27fc239f86832b4f64b0c29a769646657d06b06d21
+size 440
