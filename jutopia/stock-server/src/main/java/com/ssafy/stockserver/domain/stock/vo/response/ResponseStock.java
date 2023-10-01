@@ -1,24 +1,3 @@
-package com.ssafy.stockserver.domain.stock.vo.response;
-
-import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.Data;
-
-import java.math.BigDecimal;
-import java.util.UUID;
-
-@Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
-public class ResponseStock {
-    private UUID id;
-
-    private String stockCode;
-    private String stockName;
-
-    private BigDecimal nowMoney;
-    private BigDecimal prevMoney;
-
-    private Double changeRate;
-
-    // 분/시/일 단위
-    private int type;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0f383e27e699bcc582ae9ebf053f2d8e3c0e06a395b6853fe1c6dcdd8d944e0e
+size 531

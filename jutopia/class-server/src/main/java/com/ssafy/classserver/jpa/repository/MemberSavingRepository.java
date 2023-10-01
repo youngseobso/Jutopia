@@ -8,4 +8,6 @@ import java.util.UUID;
 
 public interface MemberSavingRepository extends JpaRepository<MemberSavingEntity, UUID> {
     Optional<MemberSavingEntity> findByMemberId(UUID memberId);
+
+    Iterable<MemberSavingEntity> findAllByMemberId(UUID memberId);
 }
