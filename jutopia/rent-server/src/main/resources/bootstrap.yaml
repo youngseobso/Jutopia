@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6dd0747d56657bd676a8980574cfe559276565d15c7f1586ea72e1fde3fb503a
-size 829
+spring:
+  cloud:
+    config:
+      uri: http://127.0.0.1:8888
+      name: rent-server
