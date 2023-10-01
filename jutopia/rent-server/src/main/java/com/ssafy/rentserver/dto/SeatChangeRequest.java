@@ -1,18 +1,3 @@
-package com.ssafy.rentserver.dto;
-
-import com.ssafy.rentserver.enums.SeatStatus;
-import lombok.Getter;
-import lombok.Setter;
-
-import java.math.BigDecimal;
-import java.util.UUID;
-
-@Getter
-@Setter
-public class SeatChangeRequest {
-    private String seatId;
-    private BigDecimal price;
-    private UUID userId;
-    private SeatStatus seatStatus;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:66df70fefd4f0ba494e27d11fda394bd75d27f75ef2cbd1452e11853583b679d
+size 350
