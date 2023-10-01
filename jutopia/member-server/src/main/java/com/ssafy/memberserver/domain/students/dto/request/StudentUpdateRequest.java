@@ -1,10 +1,10 @@
 package com.ssafy.memberserver.domain.students.dto.request;
 
-import com.ssafy.memberserver.common.enums.MemberStatus;
+import lombok.Getter;
 
-public record StudentUpdateRequest(
-        String studentId,
-        String studentPwd,
-        String studentNewPwd
-) {
+@Getter
+public class StudentUpdateRequest {
+    private String studentId;
+    private String studentPwd;
+    private String studentNewPwd;
 }
