@@ -1,7 +1,9 @@
 package com.ssafy.memberserver.domain.students.sign.dto.signIn;
 
-public record StudentSignInRequest(
-        String StudentId,
-        String StudentPwd
-) {
+import lombok.Getter;
+
+@Getter
+public class StudentSignInRequest {
+    private String studentId;
+    private String studentPwd;
 }
