@@ -1,11 +1,3 @@
-package com.ssafy.stockserver.domain.client;
-
-import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-
-//@FeignClient(name="news-server")
-@FeignClient(name = "news-server", url = "http://j9c108.p.ssafy.io:8000/news-server")
-public interface NewsServerClient {
-    @GetMapping("/stocks")
-    String getStocks();
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2ab0ced494793775f7e3920adefab5c27bfbd80b68445c58d031a4b6b6541cb7
+size 372
