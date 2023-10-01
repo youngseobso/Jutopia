@@ -1,4 +1,4 @@
-package com.ssafy.stockserver.domain.client;
+package com.ssafy.classserver.client;
 
 import lombok.Data;
 
