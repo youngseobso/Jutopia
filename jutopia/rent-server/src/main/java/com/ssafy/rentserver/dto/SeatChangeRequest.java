@@ -12,7 +12,7 @@ import java.util.UUID;
 public class SeatChangeRequest {
     private String seatId;
     private BigDecimal price;
-    private UUID userId;
+    private String userId;
     private SeatStatus seatStatus;
 
 }
