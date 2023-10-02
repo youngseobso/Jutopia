@@ -7,5 +7,4 @@ import lombok.Getter;
 public class SignInRequest {
     private String MemberId;
     private String MemberPwd;
-    private MemberRole memberRole;
 }
