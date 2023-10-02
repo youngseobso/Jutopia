@@ -1,15 +1,3 @@
-package chatbot
-
-import kotlinx.serialization.Serializable
-import kotlinx.serialization.json.JsonNames
-
-@Serializable
-data class ChatMessage(
-    val message: String,
-    @JsonNames("from_server")val fromServer: Boolean
-)
-
-@Serializable
-data class ChatRequest(
-    val message: String
-)
+version https://git-lfs.github.com/spec/v1
+oid sha256:2ef39a5364aef0c61ae3b10898dcf9666a723fc5135562cb89baf7d2416c4eab
+size 462
