@@ -1,16 +1,3 @@
-package com.jutopia
-
-import MainView
-import android.os.Bundle
-import moe.tlaster.precompose.lifecycle.PreComposeActivity
-import moe.tlaster.precompose.lifecycle.setContent
-
-class MainActivity : PreComposeActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        setContent {
-            MainView()
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6c859e9d0f3fa635aace422ba215a8fda07a43193466301819dee8ed3dd5c546
+size 383
