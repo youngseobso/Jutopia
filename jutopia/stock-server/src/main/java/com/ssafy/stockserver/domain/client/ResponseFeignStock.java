@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cd47d3e1c55cfb1354f1270e1f95253953db84acaa45732f82f081cba2fff019
-size 339
+package com.ssafy.stockserver.domain.client;
+
+import lombok.Data;
+
+import java.math.BigDecimal;
+
+@Data
+public class ResponseFeignStock {
+    private String stockName;
+
+    private String nowMoney;
+    private String prevMoney;
+//    private String company_name;
+//
+//    private String latest_price;
+//    private String previous_price;
+}
