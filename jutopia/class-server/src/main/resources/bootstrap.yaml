@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8704b39fce02df0b9c373e216c8f36b46d4211bf4f32ac154da8b3ed83b75cf0
-size 116
+spring:
+  cloud:
+    config:
+      uri: http://127.0.0.1:8888
+      name: class-server
+#  profiles:
+#    active: dev
