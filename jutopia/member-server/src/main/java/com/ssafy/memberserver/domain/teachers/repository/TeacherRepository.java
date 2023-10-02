@@ -1,13 +1,3 @@
-package com.ssafy.memberserver.domain.teachers.repository;
-
-import com.ssafy.memberserver.domain.teachers.entity.Teacher;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.Optional;
-import java.util.UUID;
-
-public interface TeacherRepository extends JpaRepository<Teacher, UUID> {
-    Optional<Teacher> findByTeacherId(String teacherId);
-    Optional<Teacher> findByTeacherEmail(String teacherEmail);
-    boolean existsByTeacherId(String teacherId);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:388df705560c0ff0997f1335e4265247fed337c502c930e17f84c751ddacdade
+size 629
