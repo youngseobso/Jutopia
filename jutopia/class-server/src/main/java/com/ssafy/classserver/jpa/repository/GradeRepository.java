@@ -10,4 +10,5 @@ import java.util.UUID;
 public interface GradeRepository extends JpaRepository<GradeEntity, UUID> {
     Iterable<GradeEntity> findAllBySchoolId(UUID schoolId);
 
+    Optional<GradeEntity> findFirstByGradeNumAndSchoolId(int gradeNum, UUID schoolId);
 }
