@@ -10,7 +10,7 @@ class MainActivity : PreComposeActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            MainView()
+            MainView(this)
         }
     }
 }
