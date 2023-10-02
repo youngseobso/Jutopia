@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e8208c8bcfa04d8dfa5b5bac86aae52e169991a6e7ef919c7a10a65d2dcf97b6
-size 296
+package com.ssafy.classserver.client;
+
+import lombok.Data;
+
+import java.math.BigDecimal;
+import java.util.UUID;
+
+@Data
+public class ResponseMember {
+    private UUID id;
+    private String student_id;
+    private String student_name;
+    private BigDecimal point;
+    private BigDecimal money;
+}
