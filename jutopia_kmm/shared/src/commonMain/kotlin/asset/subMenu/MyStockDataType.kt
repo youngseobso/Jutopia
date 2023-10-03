@@ -2,7 +2,8 @@ package asset.subMenu
 
 enum class Comparison {
     Increased,
-    Decreased
+    Decreased,
+    NotChanged,
 }
 
-data class StockDetail(val name: Int, val bought: Int, val diff: Double, val rate: Double, val type: Comparison )
+data class StockDetail(val name: String, val bought: Int, val current: Int, val qty: Int, val rate: Double, val changes: Comparison )
