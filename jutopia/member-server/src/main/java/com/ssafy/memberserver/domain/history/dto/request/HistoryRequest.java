@@ -1,15 +1,3 @@
-package com.ssafy.memberserver.domain.history.dto.request;
-
-import com.ssafy.memberserver.common.enums.HistoryType;
-
-import java.math.BigDecimal;
-import java.util.UUID;
-
-public record HistoryRequest(
-        Long id,
-        BigDecimal amount,
-        String list,
-        HistoryType historyType,
-        UUID accountId
-) {
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9788450b111d5e1ae0d34d2e7afeb151b5aef161813e31620e2cb754421fd038
+size 390
