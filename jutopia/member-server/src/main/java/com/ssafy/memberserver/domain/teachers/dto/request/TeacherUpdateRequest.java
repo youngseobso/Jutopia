@@ -1,10 +1,13 @@
 package com.ssafy.memberserver.domain.teachers.dto.request;
 
-public record TeacherUpdateRequest(
-        String teacherId,
-        String teacherPwd,
-        String teacherNewPwd,
-        String teacherName,
-        String teacherEmail
-) {
+import lombok.Getter;
+
+@Getter
+public class TeacherUpdateRequest {
+    private String teacherId;
+    private String teacherPwd;
+    private String teacherNewPwd;
+    private String teacherName;
+    private String teacherEmail;
 }
+
