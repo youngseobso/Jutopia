@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bff2a08baa22af32cddac992a9ce8b6c009b8a9d1ad8055a50c19e84de1db100
-size 345
+package com.aay.compose.radarChart.model
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.StrokeCap
+
+data class PolygonStyle(
+    val fillColor: Color,
+    val fillColorAlpha: Float,
+    val borderColor: Color,
+    val borderColorAlpha: Float,
+    val borderStrokeWidth: Float,
+    val borderStrokeCap: StrokeCap,
+)

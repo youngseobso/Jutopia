@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:769982d547c4c8f3c44f7178de9f05113c311b53d580623c677a39163f1d2567
-size 424
+package com.ssafy.memberserver.domain.pointtransaction.dto.response;
+
+import com.ssafy.memberserver.domain.students.entity.Student;
+import lombok.Builder;
+
+import java.math.BigDecimal;
+
+@Builder
+public record PointResponse(
+        BigDecimal point
+) {
+    public static PointResponse from(Student student){
+        return PointResponse.builder()
+                .point(student.getPoint())
+                .build();
+    }
+}
