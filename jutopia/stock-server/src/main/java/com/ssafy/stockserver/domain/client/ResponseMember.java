@@ -1,15 +1,3 @@
-package com.ssafy.stockserver.domain.client;
-
-import lombok.Data;
-
-import java.math.BigDecimal;
-import java.util.UUID;
-
-@Data
-public class ResponseMember {
-    private String id;
-    private String student_id;
-    private String student_name;
-    private BigDecimal point;
-    private BigDecimal money;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d857abc3423e9dbcdcfa440880cca7b12ae63d62f94d589f26afe9cc39996703
+size 303
