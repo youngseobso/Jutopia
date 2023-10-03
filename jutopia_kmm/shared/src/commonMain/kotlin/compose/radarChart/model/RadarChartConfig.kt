@@ -1,12 +1,3 @@
-package com.aay.compose.radarChart.model
-
-import androidx.compose.ui.geometry.Offset
-
-internal data class RadarChartConfig(
-    val center: Offset,
-    val netCornersPoints: List<Offset>,
-    val stepsEndPoints: List<Offset>,
-    val stepsStartPoints: List<Offset>,
-    val polygonPoints: List<Offset>,
-    val labelsPoints: List<Offset>
-)
+version https://git-lfs.github.com/spec/v1
+oid sha256:4ad27fd4512a6d1fa32f933ad223a1f3bde6f81eb580e55e5cb5fcdff8bc5bf8
+size 339
