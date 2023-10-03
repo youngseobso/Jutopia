@@ -7,8 +7,8 @@ import kotlinx.serialization.json.JsonNames
 data class ChatMessage(
 //    val userId: String = "",
     val message: String,
-    @JsonNames("from_server")val fromServer: Boolean,
-    @JsonNames("parsed_time")val parsedTime: String
+    val fromServer: Boolean,
+    val parsedTime: String
 )
 
 @Serializable
