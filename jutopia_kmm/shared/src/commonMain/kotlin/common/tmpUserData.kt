@@ -1,28 +1,3 @@
-package common
-
-object TmpUserInfo {
-    private const val memberId: String = "e602882e-30ea-42d5-9fdc-631d2ffb07c1"
-
-    private const val school: String = "ssafy"
-
-    private const val grade: Int = 1
-
-    private const val classNumber = 2
-
-    fun getMemberId(): String {
-        return memberId
-    }
-
-    fun getSchool(): String {
-        return school
-    }
-
-    fun getGrade(): Int {
-        return grade
-    }
-
-    fun getClassNumber(): Int {
-        return classNumber
-    }
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2adf2f11aee193f8866f955176a7cbb61fe731f3a3ff2049d771d918507aa288
+size 486
