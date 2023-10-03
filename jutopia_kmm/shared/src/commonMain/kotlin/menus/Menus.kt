@@ -1,13 +1,3 @@
-package menus
-
-import BottomTabBar
-import androidx.compose.foundation.layout.Column
-import androidx.compose.runtime.Composable
-import moe.tlaster.precompose.navigation.Navigator
-
-@Composable
-fun Menus(navigator: Navigator) {
-    Column {
-        BottomTabBar(navigator, 4)
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:06660ed7652a822c98fd504cd22a49fa15fc871c331f158a19aab017d493edb0
+size 1117
