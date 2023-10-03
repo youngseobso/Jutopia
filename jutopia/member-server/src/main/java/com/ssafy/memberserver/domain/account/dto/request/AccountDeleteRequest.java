@@ -1,8 +1,9 @@
 package com.ssafy.memberserver.domain.account.dto.request;
 
 import com.ssafy.memberserver.common.enums.AccountStatus;
+import lombok.Getter;
 
-public record AccountDeleteRequest(
-        AccountStatus accountStatus
-) {
+@Getter
+public class AccountDeleteRequest{
+    private AccountStatus accountStatus;
 }

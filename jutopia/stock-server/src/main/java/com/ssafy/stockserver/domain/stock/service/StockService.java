@@ -1,17 +1,3 @@
-package com.ssafy.stockserver.domain.stock.service;
-
-import com.ssafy.stockserver.domain.stock.entity.Stock;
-import com.ssafy.stockserver.domain.stock.vo.request.RequestStock;
-import com.ssafy.stockserver.domain.stock.vo.response.ResponseStock;
-
-import java.util.Optional;
-import java.util.UUID;
-
-public interface StockService {
-
-    Iterable<Stock> getAllStocks();
-
-    ResponseStock createStock(RequestStock stock);
-
-    Optional<Stock> getStock(UUID stockId);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a2dcd73daeecc167c316ae4e72d094b64ddc6857b350f4480aec997b296c34bb
+size 538

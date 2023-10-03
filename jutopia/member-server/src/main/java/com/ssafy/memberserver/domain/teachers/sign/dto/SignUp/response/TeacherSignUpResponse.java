@@ -1,15 +1,3 @@
-package com.ssafy.memberserver.domain.teachers.sign.dto.SignUp.response;
-
-import com.ssafy.memberserver.domain.teachers.entity.Teacher;
-
-public record TeacherSignUpResponse(
-        String teacherName,
-        String teacherEmail
-) {
-    public static TeacherSignUpResponse from(Teacher teacher){
-        return new TeacherSignUpResponse(
-                teacher.getTeacherName(),
-                teacher.getTeacherEmail()
-        );
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f583e7573b27631d18efee482ad3736388ef0657cfba1cc14dd9754ad2704986
+size 521

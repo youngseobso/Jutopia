@@ -7,7 +7,7 @@ import java.util.UUID;
 
 @Data
 public class ResponseMember {
-    private String id;
+    private UUID id;
     private String student_id;
     private String student_name;
     private BigDecimal point;
