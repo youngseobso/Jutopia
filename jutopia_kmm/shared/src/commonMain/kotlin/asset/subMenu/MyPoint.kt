@@ -1,12 +1,3 @@
-package asset.subMenu
-
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import moe.tlaster.precompose.viewmodel.viewModel
-
-@Composable
-fun MyPoint(viewModel: MyPointViewModel = viewModel(modelClass = MyPointViewModel::class) {
-    MyPointViewModel()
-}) {
-    Text("Point")
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc6815c9f3ee750cbcf058ab80a9726abfa9eeecf5fe718263a81525be942b36
+size 306
