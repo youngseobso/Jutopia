@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9788450b111d5e1ae0d34d2e7afeb151b5aef161813e31620e2cb754421fd038
-size 390
+package com.ssafy.memberserver.domain.history.dto.request;
+
+import com.ssafy.memberserver.common.enums.HistoryType;
+import lombok.Getter;
+
+import java.math.BigDecimal;
+import java.util.UUID;
+
+@Getter
+public class HistoryRequest {
+    private Long id;
+    private BigDecimal amount;
+    private String list;
+    private HistoryType historyType;
+    private UUID accountId;
+}

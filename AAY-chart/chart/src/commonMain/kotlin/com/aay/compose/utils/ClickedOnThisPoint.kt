@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:25fa1a719797510da3fb316a27a8fe1a341db7345160cb875cadbc72e74954c4
-size 354
+package com.aay.compose.utils
+
+import kotlin.math.hypot
+
+internal fun clickedOnThisPoint(
+    clickedPoints: MutableList<Pair<Float, Float>>,
+    x: Float,
+    y: Double,
+    tolerance: Float,
+) = clickedPoints.any {
+    val xDiff = it.first - x
+    val yDiff = it.second - y
+    val distance = hypot(xDiff.toDouble(), yDiff)
+    distance <= tolerance
+}
