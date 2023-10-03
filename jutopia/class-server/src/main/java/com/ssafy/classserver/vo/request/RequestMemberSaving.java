@@ -1,14 +1,3 @@
-package com.ssafy.classserver.vo.request;
-
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotNull;
-import lombok.Data;
-
-import java.math.BigDecimal;
-
-@Data
-public class RequestMemberSaving {
-    @NotNull(message = "납입할 금액을 설정하세요")
-    @Min(value = 0, message = "최소 금액은 0 이상이어야 합니다.")
-    private BigDecimal money;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:39885f3f7cecb05841efc73df93e8ee50b7692d38b0f6ca02215a614f4746278
+size 398
