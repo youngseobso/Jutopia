@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aadf501181c787d778609359c43595d00fc5ffae76417f101e96dd867401917f
-size 144
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>
