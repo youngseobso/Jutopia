@@ -13,6 +13,4 @@ public class NoticeRequest {
     private String content;
     private Long viewCount;
     private NoticeStatus noticeStatus;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
 }
