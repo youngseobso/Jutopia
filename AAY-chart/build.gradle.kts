@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:94ca7dbec0a229d2deda9f4374de43b2e050ecf04276c1d4a859eaf25b56e50a
-size 373
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    }
+}
+
+plugins {
+    kotlin("multiplatform") apply false
+    kotlin("android") apply false
+    id("com.android.application") apply false
+    id("com.android.library") apply false
+    id("org.jetbrains.compose") apply false
+
+}

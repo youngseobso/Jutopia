@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:510ccfb396e7c84520282b32057a30f11fdfb1de59430f3e2d73a44b3cb54d7f
-size 462
+package com.aay.android
+
+
+import android.os.Bundle
+import androidx.activity.compose.setContent
+import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.material.MaterialTheme
+import com.aay.common.App
+
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            MaterialTheme {
+               App()
+            }
+        }
+    }
+}
