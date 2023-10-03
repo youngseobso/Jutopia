@@ -1,17 +1,3 @@
-package com.ssafy.memberserver.domain.notice.dto.request;
-
-import com.ssafy.memberserver.common.enums.NoticeStatus;
-import com.ssafy.memberserver.domain.teachers.entity.Teacher;
-
-import java.time.LocalDateTime;
-
-public record NoticeRequest(
-        Long id,
-        String title,
-        String content,
-        Long viewCount,
-        NoticeStatus noticeStatus,
-        LocalDateTime createdAt,
-        LocalDateTime updateAt
-) {
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:457e2815fa2b9eeabcb1a40672ad731c9037f710c8c567b358751f8877dec198
+size 489
