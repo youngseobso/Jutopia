@@ -1,17 +1,3 @@
-package home
-
-import BottomTabBar
-import androidx.compose.foundation.layout.Column
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import common.TopPageBar
-import moe.tlaster.precompose.navigation.Navigator
-
-@Composable
-fun Notice(navigator: Navigator) {
-    Column {
-        TopPageBar("공지사항", navigator=navigator)
-    }
-    BottomTabBar(navigator)
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d76025ab57b6d3739e27bdece61174fa1a780bb03f57efffae8dcc53d5f80797
+size 393
