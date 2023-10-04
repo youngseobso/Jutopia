@@ -1,17 +1,3 @@
-package com.ssafy.memberserver.domain.account.dto.request;
-
-import com.ssafy.memberserver.common.enums.AccountStatus;
-import lombok.Getter;
-
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
-
-@Getter
-public class ReceiveMoneyRequest {
-    private String sender;
-    private String receiver;
-    private BigDecimal amount;
-    private AccountStatus accountStatus;
-    private LocalDateTime createdAt;
-    private String studentId;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:092a36be951b2cccde9fb40e1c6b6a218280cff94e2f684a665ea8c544a58ac6
+size 443
