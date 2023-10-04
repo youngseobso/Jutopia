@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1cff0437c56ee8cb7f3def130eecc07effaa80f2633f567b5ccef09cc69660b3
-size 415
+package com.ssafy.memberserver.domain.notice.dto.request;
+
+import com.ssafy.memberserver.common.enums.NoticeStatus;
+import com.ssafy.memberserver.domain.teachers.entity.Teacher;
+import lombok.Getter;
+
+import java.time.LocalDateTime;
+
+@Getter
+public class NoticeRequest {
+    private Long id;
+    private String title;
+    private String content;
+    private Long viewCount;
+    private NoticeStatus noticeStatus;
+}
