@@ -1,8 +1,9 @@
 package com.ssafy.memberserver.domain.notice.dto.request;
 
 import com.ssafy.memberserver.common.enums.NoticeStatus;
+import lombok.Getter;
 
-public record NoticeDeleteRequest(
-        NoticeStatus noticeStatus
-) {
+@Getter
+public class NoticeDeleteRequest{
+    private NoticeStatus noticeStatus;
 }

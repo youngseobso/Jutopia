@@ -1,10 +1,12 @@
 package com.ssafy.memberserver.domain.students.dto.request;
 
+import lombok.Getter;
+
 import java.math.BigDecimal;
 
-public record StudentPointUpdateRequest(
-        String studentId,
-        BigDecimal point
-
-) {
+@Getter
+public class StudentPointUpdateRequest {
+    private String studentId;
+    private String seatId;
+    private BigDecimal point;
 }
