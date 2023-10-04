@@ -8,10 +8,9 @@ import java.math.BigDecimal;
 public class ResponseFeignStock {
     private String stockName;
 
-    private String nowMoney;
-    private String prevMoney;
-//    private String company_name;
-//
-//    private String latest_price;
-//    private String previous_price;
+    private String stockCode;
+    private int price;
+    private double changeRate;
+    private int changeMoney;
+    private int type;
 }
