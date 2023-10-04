@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9fc70440144d26f73fabf510514b654d9ccc959d7af50a3a212a0774531870cd
-size 421
+package com.ssafy.memberserver.domain.account.repository;
+
+import com.ssafy.memberserver.domain.account.entity.Account;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+import java.util.UUID;
+
+public interface AccountRepository extends JpaRepository<Account, UUID> {
+    Optional<Account> findByAccountName(String accountName);
+}
