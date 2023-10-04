@@ -1,12 +1,3 @@
-package asset.subMenu
-
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import moe.tlaster.precompose.viewmodel.viewModel
-
-@Composable
-fun MyStock(viewModel: MyStockViewModel = viewModel(modelClass = MyStockViewModel::class) {
-    MyStockViewModel()
-}) {
-    Text("Stock")
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1bac266e4bf5ea7175edecadaf92d9fef3bef442e59d2ad084a18477d67ad987
+size 9109

@@ -1,9 +1,9 @@
 package com.ssafy.memberserver.domain.students.dto.response;
 
 public record StudentDeleteResponse(
-        boolean StudentDeleteResult
+        boolean studentDeleteResult
 ) {
-    public static StudentDeleteResponse of(boolean StudentDeleteResult){
-        return new StudentDeleteResponse(StudentDeleteResult);
+    public static StudentDeleteResponse of(boolean studentDeleteResult){
+        return new StudentDeleteResponse(studentDeleteResult);
     }
 }

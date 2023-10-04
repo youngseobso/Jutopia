@@ -8,6 +8,6 @@ import moe.tlaster.precompose.navigation.Navigator
 @Composable
 fun Menus(navigator: Navigator) {
     Column {
-        BottomTabBar(navigator)
+        BottomTabBar(navigator, 4)
     }
 }

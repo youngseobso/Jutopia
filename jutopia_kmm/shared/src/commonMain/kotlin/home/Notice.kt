@@ -12,6 +12,6 @@ fun Notice(navigator: Navigator) {
     Column {
         TopPageBar("공지사항", navigator=navigator)
     }
-    BottomTabBar(navigator)
+    BottomTabBar(navigator, 0)
 
 }
