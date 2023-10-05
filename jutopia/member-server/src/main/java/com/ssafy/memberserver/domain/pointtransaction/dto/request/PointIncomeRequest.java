@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 import java.util.UUID;
 @Getter
 public class PointIncomeRequest {
+    private String studentId;
     private BigDecimal income;
     private String place;
-    private UUID studentId;
 }
