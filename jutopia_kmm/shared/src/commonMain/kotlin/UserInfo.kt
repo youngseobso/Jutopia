@@ -1,4 +1,3 @@
-import kotlinx.serialization.Serializable
-
-@Serializable
-data class UserInfo(val uuid: String, val id: String, val school: String, val grade: Int, val classroom: Int, val studentNumber: Int, val classUUID: String)
+version https://git-lfs.github.com/spec/v1
+oid sha256:fc805fe497976578732c174dbbb0a7219cd2a072323974be2a580fb94618d9bf
+size 213
