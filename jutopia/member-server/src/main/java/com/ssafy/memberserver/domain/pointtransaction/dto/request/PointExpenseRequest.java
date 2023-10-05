@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 import java.util.UUID;
 @Getter
 public class PointExpenseRequest {
+    private String studentId;
     private BigDecimal expense;
     private String place;
-    private UUID studentId;
 }
