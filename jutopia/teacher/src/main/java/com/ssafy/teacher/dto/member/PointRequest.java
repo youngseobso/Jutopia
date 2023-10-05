@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0018799481bca6714c34946f92335bad54f4696d220897cc96022c34cbc90947
-size 334
+package com.ssafy.teacher.dto.member;
+
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+import java.math.BigDecimal;
+
+@Getter
+@Setter
+@ToString
+@Builder
+public class PointRequest {
+    private String school;
+    private int grade;
+    private int classroom;
+    private BigDecimal income;
+}
