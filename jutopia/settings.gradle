@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fbbbdcdcac00c901ffc6cdf981e8e87bb4de5db4389f61e891899ed40125bdd3
-size 29
+rootProject.name = 'jutopia'
+include 'apigateway-server'
+include 'config-server'
+include 'discovery-server'
+include 'common'
+include 'bank-server'
+include 'rent-server'
+include 'class-server'
+include 'member-server'
+include 'stock-server'
+include 'teacher'

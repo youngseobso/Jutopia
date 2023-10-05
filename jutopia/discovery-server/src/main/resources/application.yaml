@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a01b0816b4a68b486f73496c7741451d927ff1e85b4c3f44ded242f7d6292458
-size 146
+server:
+  port: 8761
+spring:
+  application:
+    name: discovery-server
+  cloud:
+    config:
+      uri: http://127.0.0.1:8888
+      name: jutopia
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false

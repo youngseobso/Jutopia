@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:45065bf96d46213c69e0586d591b72c546adae7799b740437013624165a6dd5c
-size 444
+package com.ssafy.discoveryserver;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+
+
+@EnableEurekaServer
+@SpringBootApplication
+public class DiscoveryServerApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(DiscoveryServerApplication.class, args);
+    }
+
+}
