@@ -9,7 +9,10 @@ import lombok.ToString;
 @Setter
 @Builder
 @ToString
-public class TeacherRequest {
-    private String memberId;
-    private String memberPwd;
+public class NoticeRequest {
+    private String title;
+    private String content;
+    private String school;
+    private int grade;
+    private int classroom;
 }
