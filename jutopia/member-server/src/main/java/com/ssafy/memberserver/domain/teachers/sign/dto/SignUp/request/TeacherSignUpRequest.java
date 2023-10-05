@@ -1,16 +1,3 @@
-package com.ssafy.memberserver.domain.teachers.sign.dto.SignUp.request;
-
-import com.ssafy.memberserver.common.enums.MemberBioStatus;
-import com.ssafy.memberserver.common.enums.MemberRole;
-import com.ssafy.memberserver.common.enums.MemberStatus;
-import lombok.Getter;
-
-import java.util.UUID;
-
-@Getter
-public class TeacherSignUpRequest{
-    private String teacherId;
-    private String teacherPwd;
-    private String teacherName;
-    private String teacherEmail;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:23b774daddf23086777836747c73927aeb895de5f0184c62915cd1dd5efb4323
+size 540

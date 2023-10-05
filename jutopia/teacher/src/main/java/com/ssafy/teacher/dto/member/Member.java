@@ -1,10 +1,3 @@
-package com.ssafy.teacher.dto.member;
-
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
-public class Member {
-    private String school;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6b70de7c0be42d575a1350cfbe86cfe905b557c358c039ed1a8d2e09fb285150
+size 623
