@@ -1,15 +1,3 @@
-package com.ssafy.teacher.dto.rent;
-
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
-@Builder
-public class SeatRequest {
-    private String school;
-    private int totalCount;
-    private int grade;
-    private int clazzNumber;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:347d10821d2012cd8ab616fed8c64bc9afdc589ba66016b89163124eb7a3bd65
+size 266
