@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:729e60425512e2f89c98feb0bf84efc9adbb1ecd88ba784a45dc83702a748aae
-size 359
+package com.ssafy.teacher.dto.rent;
+
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.List;
+
+
+@Getter
+@Setter
+public class Seat {
+    private String id;
+    private int position;
+    private int price;
+    private String user_id;
+    private String seat_status;
+    private int clazz_number;
+    private int grade;
+    private String school;
+
+}
+
