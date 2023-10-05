@@ -1,16 +1,3 @@
-package com.ssafy.memberserver.domain.notice.dto.request;
-
-import com.ssafy.memberserver.common.enums.NoticeStatus;
-import com.ssafy.memberserver.domain.teachers.entity.Teacher;
-import lombok.Getter;
-
-import java.time.LocalDateTime;
-
-@Getter
-public class NoticeRequest {
-    private String title;
-    private String content;
-    private String school;
-    private int grade;
-    private int classroom;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e81e9f383f5d98dfc5d520956056eaf76a044aaeff066b82532f2ebd24e135e
+size 404
