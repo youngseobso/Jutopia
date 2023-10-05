@@ -8,9 +8,9 @@ import java.time.LocalDateTime;
 
 @Getter
 public class NoticeRequest {
-    private Long id;
     private String title;
     private String content;
-    private Long viewCount;
-    private NoticeStatus noticeStatus;
+    private String school;
+    private int grade;
+    private int classroom;
 }
