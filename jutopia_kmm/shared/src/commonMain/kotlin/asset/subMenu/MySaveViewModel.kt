@@ -3,9 +3,9 @@ package asset.subMenu
 import moe.tlaster.precompose.viewmodel.ViewModel
 
 class MySaveViewModel: ViewModel() {
-    private val _transactionHistory: MutableList<depositDetail> = mutableListOf(
-        depositDetail("2023.09.07", "15:14:00", transactionType.Deposit, "1회차 입금", 10000, 10000),
+    private val _transactionHistory: MutableList<DepositDetail> = mutableListOf(
+        DepositDetail("2023.09.07", "15:14:00", TransactionType.Deposit, "1회차 입금", 10000.0, 10000.0),
     )
 
-    val transactionHistory: List<depositDetail> = _transactionHistory
+    val transactionHistory: List<DepositDetail> = _transactionHistory
 }
