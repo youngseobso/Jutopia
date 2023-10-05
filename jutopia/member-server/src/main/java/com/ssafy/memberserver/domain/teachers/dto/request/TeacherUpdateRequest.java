@@ -1,13 +1,3 @@
-package com.ssafy.memberserver.domain.teachers.dto.request;
-
-import lombok.Getter;
-
-@Getter
-public class TeacherUpdateRequest {
-    private String teacherId;
-    private String teacherPwd;
-    private String teacherNewPwd;
-    private String teacherName;
-    private String teacherEmail;
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:640f742acd162fa341ef1c8bb8e8b9f7fc5a94eb9565555cd74d1a4e55ca7e28
+size 291
