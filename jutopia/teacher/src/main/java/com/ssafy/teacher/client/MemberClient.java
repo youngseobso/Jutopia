@@ -1,16 +1,3 @@
-package com.ssafy.teacher.client;
-
-import com.ssafy.teacher.dto.member.Member;
-import com.ssafy.teacher.dto.member.TeacherRequest;
-import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-
-@FeignClient(name = "teacher-member", url = "http://j9c108.p.ssafy.io:8000/member-server")
-
-public interface MemberClient {
-
-    @PostMapping("")
-    Member login(@RequestBody TeacherRequest request);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:db7c0ef76fe0b4123e7062c18ba385fef2145aa7dea088808a049f1523affc03
+size 512
