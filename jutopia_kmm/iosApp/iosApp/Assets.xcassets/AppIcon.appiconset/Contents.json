@@ -1,14 +1,3 @@
-{
-  "images" : [
-    {
-      "filename" : "app-icon-1024.png",
-      "idiom" : "universal",
-      "platform" : "ios",
-      "size" : "1024x1024"
-    }
-  ],
-  "info" : {
-    "author" : "xcode",
-    "version" : 1
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eb58f836a1ae5cdb9b42d5f6877f76ba678bf7310ffe1e0478bb39530c7425f6
+size 1655
