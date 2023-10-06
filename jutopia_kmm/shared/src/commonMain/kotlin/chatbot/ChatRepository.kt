@@ -1,16 +1,3 @@
-package chatbot
-
-object ChatRepository {
-    private val  _message = mutableListOf<ChatMessage>(
-        ChatMessage( message = "안녕하세요, 무엇을 도와드릴까요?",  fromServer = true, parsedTime = "")
-    )
-    val messages: List<ChatMessage> get() = _message.toList()
-
-    fun addMessage(message: ChatMessage) {
-        _message.add(message)
-    }
-
-    fun clearMessages(){
-        _message.clear()
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8d87c4dd478ec421bea2158e5260e326fe703d7d1ffecedb80539d21910cc43e
+size 421

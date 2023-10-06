@@ -1,9 +1,3 @@
-package com.aay.compose.donutChart.model
-
-import androidx.compose.ui.graphics.Color
-
-data class PieChartData(
-    val data:Double,
-    val color: Color,
-    val partName:String
-)
+version https://git-lfs.github.com/spec/v1
+oid sha256:229bd277422997aba7478ad1f69cf930b62496425398e49e354771a7588fe9a2
+size 179
