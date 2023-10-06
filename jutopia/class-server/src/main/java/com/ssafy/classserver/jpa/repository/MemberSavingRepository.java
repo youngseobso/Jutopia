@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:45abfd92baeea221bdb42643c79d210a9dfae5aedffa80ed7f08797be96d9d2d
-size 377
+package com.ssafy.classserver.jpa.repository;
+
+import com.ssafy.classserver.jpa.entity.MemberSavingEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+import java.util.UUID;
+
+public interface MemberSavingRepository extends JpaRepository<MemberSavingEntity, UUID> {
+    Optional<MemberSavingEntity> findByMemberId(UUID memberId);
+
+    Iterable<MemberSavingEntity> findAllByMemberId(UUID memberId);
+}

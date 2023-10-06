@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:084ac621578da5b69fe275b656492573e40813a6d7d913cee8ed37c025d100b7
-size 380
+package com.ssafy.classserver.jpa.repository;
+
+import com.ssafy.classserver.jpa.entity.GradeEntity;
+import com.ssafy.classserver.jpa.entity.SchoolEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+
+import java.util.Optional;
+import java.util.UUID;
+
+public interface SchoolRepository extends JpaRepository<SchoolEntity, UUID> {
+    Optional<SchoolEntity> findFirstBySchoolName(String schoolName);
+}
