@@ -12,6 +12,6 @@ fun LeaseScreen(navigator: Navigator) {
         TopPageBar("임대", navigator = navigator)
         LeasePage()
     }
-    BottomTabBar(navigator)
+    BottomTabBar(navigator, 0)
 }
 

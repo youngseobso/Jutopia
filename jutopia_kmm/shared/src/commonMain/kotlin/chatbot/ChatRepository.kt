@@ -2,7 +2,7 @@ package chatbot
 
 object ChatRepository {
     private val  _message = mutableListOf<ChatMessage>(
-        ChatMessage( "안녕하세요, 무엇을 도와드릴까요?",  true)
+        ChatMessage( message = "안녕하세요, 무엇을 도와드릴까요?",  fromServer = true, parsedTime = "")
     )
     val messages: List<ChatMessage> get() = _message.toList()
 

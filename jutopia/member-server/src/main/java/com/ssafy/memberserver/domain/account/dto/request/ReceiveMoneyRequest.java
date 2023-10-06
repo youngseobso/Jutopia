@@ -1,18 +1,17 @@
 package com.ssafy.memberserver.domain.account.dto.request;
 
 import com.ssafy.memberserver.common.enums.AccountStatus;
-import com.ssafy.memberserver.common.enums.MoneyType;
+import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public record ReceiveMoneyRequest(
-        String sender,
-        String receiver,
-        BigDecimal amount,
-        MoneyType moneyType,
-        AccountStatus accountStatus,
-        LocalDateTime createdAt,
-        String studentId
-) {
+@Getter
+public class ReceiveMoneyRequest {
+    private String sender;
+    private String receiver;
+    private BigDecimal amount;
+    private AccountStatus accountStatus;
+    private LocalDateTime createdAt;
+    private String studentId;
 }

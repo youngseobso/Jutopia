@@ -7,5 +7,6 @@ import java.math.BigDecimal;
 @Getter
 public class StudentPointUpdateRequest {
     private String studentId;
+    private String seatId;
     private BigDecimal point;
 }
