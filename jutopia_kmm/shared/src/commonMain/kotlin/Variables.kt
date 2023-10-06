@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d88182969bb0f0b0653e17471ce873124a050a40ac05c2339ef18b4b664fc4f7
-size 433
+import androidx.compose.ui.graphics.Color
+
+object Variables {
+    val ColorsPrimary: Color = Color(0xFF5D7DD4)
+    val ColorsOnPrimary: Color = Color(0xFFFFFFFF)
+    val ColorsPrimaryVariant: Color = Color(0xFF3F51B5)
+    val ColorsOnPrimaryVariant: Color = Color(0xFFFFFFFF)
+    val ColorsSecondary: Color = Color(0xFF04C8B1)
+    val ColorsOnSecondary: Color = Color(0xFFFFFFFF)
+    val ColorsBackground: Color = Color(0xFFFFFFFF)
+}
