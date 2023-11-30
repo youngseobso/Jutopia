@@ -1,3 +1,63 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:40e1569a30a6d8e9fe69184d1174352c46dd39bde65c5cc07a64b603e6f3e77a
-size 1511
+package com.ssafy.common.api;
+
+import com.ssafy.common.error.ErrorCodeIfs;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Api<T> {
+
+    private Result result;
+
+    private T body;
+
+    public static <T> Api<T> OK(T data) {
+        var api = new Api<T>();
+        api.result = Result.OK();
+        api.body = data;
+        return api;
+    }
+
+    public static <T> Api<T> CREATED(T data) {
+        var api = new Api<T>();
+        api.result = Result.CREATED();
+        api.body = data;
+        return api;
+    }
+
+    public static <T> Api<T> NOT_FOUND(T data) {
+        var api = new Api<T>();
+        api.result = Result.NOT_FOUND();
+        api.body = data;
+        return api;
+    }
+
+    public static <T> Api<T> BAD_REQUEST(T data, String msg) {
+        var api = new Api<T>();
+        api.result = Result.BAD_REQUEST(msg);
+        api.body = data;
+        return api;
+    }
+
+    public static Api<Object> ERROR(Result result){
+        var api = new Api<Object>();
+        api.result = result;
+        return api;
+    }
+
+    public static Api<Object> ERROR(ErrorCodeIfs errorCodeIfs){
+        var api = new Api<Object>();
+        api.result = Result.ERROR(errorCodeIfs);
+        return api;
+    }
+
+    public static Api<Object> ERROR(ErrorCodeIfs errorCodeIfs, String description){
+        var api = new Api<Object>();
+        api.result = Result.ERROR(errorCodeIfs, description);
+        return api;
+    }
+
+}

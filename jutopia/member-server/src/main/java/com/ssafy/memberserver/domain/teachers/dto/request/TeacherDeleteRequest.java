@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6b7bc727ed197e2d371c8383e5f16944c6db1df3de8344d5799eb6e2cf75f2f8
-size 750
+package com.ssafy.memberserver.domain.teachers.dto.request;
+
+import com.ssafy.memberserver.common.enums.MemberRole;
+import com.ssafy.memberserver.common.enums.MemberStatus;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Getter;
+
+@Getter
+public class TeacherDeleteRequest {
+        @Schema(description = "선생님 아이디")
+        private String teacherId;
+
+        @Schema(description = "선생님 비밀번호")
+        private String teacherPwd;
+
+        @Schema(description = "선생님 이름")
+        private String teacherName;
+
+        @Schema(description = "Member의 권한")
+        private MemberRole memberRole;
+
+        @Schema(description = "Member의 탈퇴 여부")
+        private MemberStatus memberStatus;
+}

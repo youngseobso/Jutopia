@@ -1,3 +1,137 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:840dee70c748c5b6351139f8ce3952e6b0f10970db7152eddf9258e1b826da7f
-size 3384
+version: "3"
+services:
+  zoo1:
+    image: confluentinc/cp-zookeeper:6.2.0
+    container_name: zoo1
+    restart: always
+    hostname: zoo1    
+    networks:
+      broker-bridge:
+        ipv4_address: 172.18.0.51
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_SERVER_ID: 1
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+  zoo2:
+    image: confluentinc/cp-zookeeper:6.2.0
+    container_name: zoo2
+    hostname: zoo2
+    restart: always
+    networks:
+      broker-bridge:
+        ipv4_address: 172.18.0.52
+    ports:
+      - "2182:2181"
+    environment:
+      ZOOKEEPER_SERVER_ID: 2
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+  zoo3:
+    image: confluentinc/cp-zookeeper:6.2.0
+    container_name: zoo3
+    hostname: zoo3
+    restart: always
+    networks:
+      broker-bridge:
+        ipv4_address: 172.18.0.53
+    ports:
+      - "2183:2181"
+    environment:
+      ZOOKEEPER_SERVER_ID: 3
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+  
+  kafka1:
+    image: confluentinc/cp-kafka:6.2.0
+    container_name: kafka1
+    hostname: kafka1
+    restart: always
+    networks:
+      broker-bridge:
+        ipv4_address: 172.18.0.61
+    ports:
+      - "9092:9092"
+      - "19092:19092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zoo1:2181,zoo2:2181,zoo3:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka1:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+    depends_on:
+      - zoo1
+      - zoo2
+      - zoo3
+
+  kafka2:
+    image: confluentinc/cp-kafka:6.2.0
+    container_name: kafka2
+    hostname: kafka2
+    restart: always
+    networks:
+      broker-bridge:
+        ipv4_address: 172.18.0.62
+    ports:
+      - "9093:9092"
+      - "19093:19093"
+    environment:
+      KAFKA_BROKER_ID: 2
+      KAFKA_ZOOKEEPER_CONNECT: zoo1:2181,zoo2:2181,zoo3:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka2:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+    depends_on:
+      - zoo1
+      - zoo2
+      - zoo3
+
+  kafka3:
+    image: confluentinc/cp-kafka:6.2.0
+    container_name: kafka3
+    hostname: kafka3
+    restart: always
+    networks:
+      broker-bridge:
+        ipv4_address: 172.18.0.63
+    ports:
+      - "9094:9092"
+      - "19094:19094"
+    environment:
+      KAFKA_BROKER_ID: 3
+      KAFKA_ZOOKEEPER_CONNECT: zoo1:2181,zoo2:2181,zoo3:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka3:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+    depends_on:
+      - zoo1
+      - zoo2
+      - zoo3
+  
+  kafka-ui:
+    image: provectuslabs/kafka-ui
+    container_name: kafka-ui
+    ports:
+      - "10000:8099"
+    restart: always
+    networks:
+      - broker-bridge
+    environment:
+      - KAFKA_CLUSTERS_0_NAME=jutopia
+      - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=PLAINTEXT://kafka1:9092,PLAINTEXT://kafka2:9093,PLAINTEXT://kafka3:9094
+      - KAFKA_CLUSTERS_0_ZOOKEEPER=zoo1:2181,zoo2:2182,zoo3:2183
+    depends_on:
+      - zoo1
+      - zoo2
+      - zoo3
+      - kafka1
+      - kafka2
+      - kafka3
+                 
+networks:
+  broker-bridge:
+    external:
+      name: jutopia-network

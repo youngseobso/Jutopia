@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:114c312d62342547d75fb98e068427a39f3d7cdaace870dfa2247d103c70a9d0
-size 1078
+package com.ssafy.memberserver.domain.history.dto.response;
+
+import com.ssafy.memberserver.common.enums.HistoryType;
+import com.ssafy.memberserver.domain.history.entity.History;
+import lombok.Builder;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.UUID;
+@Builder
+public record AccountHistoryResponse(
+        Long id,
+        String sender,
+        String receiver,
+        BigDecimal amount,
+        BigDecimal balance,
+        HistoryType historyType,
+        LocalDateTime createdAt,
+        UUID accountId
+) {
+    public static AccountHistoryResponse from(History history){
+        return AccountHistoryResponse.builder()
+                .id(history.getId())
+                .sender(history.getSender())
+                .receiver(history.getReceiver())
+                .amount(history.getAmount())
+                .balance(history.getBalance())
+                .historyType(history.getHistoryType())
+                .createdAt(history.getCreatedAt())
+                .accountId(history.getAccount().getId())
+                .build();
+    }
+}

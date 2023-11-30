@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:beb2e52327a8ba46c87168bc29df6b4179301d25027fafcdc3b9fd2f2d3b803a
-size 843
+package com.ssafy.classserver.service;
+
+import com.ssafy.classserver.dto.ClassRoomDto;
+import com.ssafy.classserver.dto.SchoolDto;
+import com.ssafy.classserver.jpa.entity.ClassRoomEntity;
+import com.ssafy.classserver.jpa.entity.GradeEntity;
+import com.ssafy.classserver.jpa.entity.SchoolEntity;
+
+import java.util.Optional;
+import java.util.UUID;
+
+public interface SchoolService {
+    Iterable<SchoolEntity> getAllSchool();
+    Iterable<GradeEntity> getGradesBySchoolId(UUID schoolId);
+    Optional<SchoolEntity> getOneSchool(UUID schoolId);
+    SchoolDto createSchool(SchoolDto school);
+    ClassRoomDto createClassRoom(ClassRoomDto classRoomDto, UUID gradeId);
+    ClassRoomDto getClassRoom(UUID classroomId);
+    Iterable<ClassRoomEntity> getClassesByGradeId(UUID id);
+
+    UUID getClassRoomId(String schoolName, int grade, int classNum);
+}

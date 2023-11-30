@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3695ca0530cb1583b0347ce632474a5fc8e8057665df04ec6d1949d4935c9b90
-size 636
+package com.aay.compose.donutChart.component
+
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.drawscope.DrawScope
+import androidx.compose.ui.unit.dp
+
+internal fun DrawScope.drawLines(
+    ratioLineColor: Color,
+    lineStart: Offset,
+    lineEnd: Offset,
+    secondLineEnd: Offset,
+) {
+    drawLine(
+        color = ratioLineColor,
+        start = lineStart,
+        end = lineEnd,
+        strokeWidth = 2.dp.toPx()
+    )
+    drawLine(
+        color = ratioLineColor,
+        start = lineEnd,
+        end = secondLineEnd,
+        strokeWidth = 2.dp.toPx()
+    )
+}

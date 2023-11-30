@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:30ffd6328763bd1fd3b7b4a6c77b1960379f94d1c0e4cda6e575a2b24cb05627
-size 577
+package com.ssafy.memberserver.domain.account.dto.request;
+
+import com.ssafy.memberserver.common.enums.AccountStatus;
+import com.ssafy.memberserver.common.enums.HistoryType;
+import lombok.Getter;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.UUID;
+
+@Getter
+public class SendMoneyRequest {
+    private UUID id;
+    private String sender;
+    private String receiver;
+    private BigDecimal amount;
+    private HistoryType historyType;
+    private AccountStatus accountStatus;
+    private LocalDateTime createdAt;
+    private String studentId;
+}

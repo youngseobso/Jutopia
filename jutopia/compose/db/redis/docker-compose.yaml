@@ -1,3 +1,68 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d0de480f499d6262df54dffb9cce21c0f022b846e680456b7cf57bfd8931fc94
-size 1687
+version: "3.7"
+services:
+  node1:
+    container_name: node1
+    image: redis:7.2
+    volumes:
+      - ./conf1:/usr/local/etc/redis/
+    command: redis-server /usr/local/etc/redis/redis.conf
+    ports:
+      - 7001:7001
+      - 7002:7002
+      - 7003:7003
+      - 7004:7004
+      - 7005:7005
+      - 7006:7006
+
+  node2:
+    network_mode: "service:node1"
+    container_name: node2
+    image: redis:7.2
+    volumes:
+      - ./conf2:/usr/local/etc/redis/
+    command: redis-server /usr/local/etc/redis/redis.conf
+
+  node3:
+    network_mode: "service:node1"
+    container_name: node3
+    image: redis:7.2
+    volumes:
+      - ./conf3:/usr/local/etc/redis/
+    command: redis-server /usr/local/etc/redis/redis.conf
+
+  node4:
+    network_mode: "service:node1"
+    container_name: node4
+    image: redis:7.2
+    volumes:
+      - ./conf4:/usr/local/etc/redis/
+    command: redis-server /usr/local/etc/redis/redis.conf
+
+  node5:
+    network_mode: "service:node1"
+    container_name: node5
+    image: redis:7.2
+    volumes:
+      - ./conf5:/usr/local/etc/redis/
+    command: redis-server /usr/local/etc/redis/redis.conf
+
+  node6:
+    network_mode: "service:node1"
+    container_name: node6
+    image: redis:7.2
+    volumes:
+      - ./conf6:/usr/local/etc/redis/
+    command: redis-server /usr/local/etc/redis/redis.conf
+
+  redis-cluster-entry:
+    network_mode: "service:node1"
+    image: redis:7.2
+    container_name: redis-cluster
+    command: redis-cli --cluster create 127.0.0.1:7001 127.0.0.1:7002 127.0.0.1:7003 127.0.0.1:7004 127.0.0.1:7005 127.0.0.1:7006 --cluster-replicas 1 --cluster-yes
+    depends_on:
+      - node1
+      - node2
+      - node3
+      - node4
+      - node5
+      - node6

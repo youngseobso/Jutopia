@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:336b81d8b41de754c4fae7a80fccfcb3b8c1b65c3d4571fc964156753232c637
-size 693
+server:
+  port: 0
+
+spring:
+  application:
+    name: stock-server
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+
+springdoc:
+  api-docs:
+    path: /stock-server/v3/api-docs
+  swagger-ui:
+    path: /stock-server/swagger-ui.html
+
+openapi:
+  service:
+    # API Gateway 포트
+    url: http://localhost:8000
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, busrefresh

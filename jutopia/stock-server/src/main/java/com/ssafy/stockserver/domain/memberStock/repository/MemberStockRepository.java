@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:928af23245f49cbe885da06bdef516b97d87344139cf7c369d1b76a92b8d3233
-size 527
+package com.ssafy.stockserver.domain.memberStock.repository;
+
+import com.ssafy.stockserver.domain.memberStock.entity.MemberStock;
+import com.ssafy.stockserver.domain.stock.entity.Stock;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+import java.util.UUID;
+
+public interface MemberStockRepository extends JpaRepository<MemberStock, UUID> {
+    Iterable<MemberStock> findAllByMemberId(UUID memberId);
+
+    Optional<MemberStock> findByMemberIdAndStockId(UUID memberId, UUID stockId);
+
+}

@@ -1,3 +1,44 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ee782fdc3c2a3b556311a1e4f4d4abb1c0e7e8ca9e0ae7789b6ce947081d367a
-size 1023
+package lease
+
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+//data class Seat(val id: Int, val info: String, val price: Int, val isAvailable: Boolean)
+
+
+@Serializable
+data class ListResponse(
+    val result: ApiResult,
+    val body: List<Seat>?
+)
+
+@Serializable
+data class Response(
+    val result: ApiResult,
+    val body: Seat?
+)
+
+
+@Serializable
+data class ApiResult(
+    @SerialName("result_code") val resultCode: Int,
+    @SerialName("result_message") val resultMessage: String,
+    @SerialName("result_description") val resultDescription: String
+)
+@Serializable
+data class Seat(
+    val id: String,
+    val position: Int,
+    val price: Double,
+    @SerialName("user_id") val userId: String?,
+    @SerialName("seat_status") val seatStatus: String,
+    @SerialName("clazz_number") val clazzNumber: Int,
+    val grade: Int,
+    val school: String,
+)
+
+@Serializable
+data class SeatRequest(
+    @SerialName("seat_id")val seatId: String,
+    @SerialName("user_id")val userId: String,
+)

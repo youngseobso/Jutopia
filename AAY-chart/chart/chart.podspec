@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a45d38d8d826fcb33f9a5fb6f0d87897e7d197de1a68334c9fe43aaf04e6fc6b
-size 1528
+Pod::Spec.new do |spec|
+    spec.name                     = 'chart'
+    spec.version                  = 'Beta-0.0.5'
+    spec.homepage                 = ''
+    spec.source                   = { :http=> ''}
+    spec.authors                  = ''
+    spec.license                  = ''
+    spec.summary                  = ''
+    spec.vendored_frameworks      = 'build/cocoapods/framework/chart.framework'
+    spec.libraries                = 'c++'
+                
+                
+                
+    spec.pod_target_xcconfig = {
+        'KOTLIN_PROJECT_PATH' => ':chart',
+        'PRODUCT_MODULE_NAME' => 'chart',
+    }
+                
+    spec.script_phases = [
+        {
+            :name => 'Build chart',
+            :execution_position => :before_compile,
+            :shell_path => '/bin/sh',
+            :script => <<-SCRIPT
+                if [ "YES" = "$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED" ]; then
+                  echo "Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \"YES\""
+                  exit 0
+                fi
+                set -ev
+                REPO_ROOT="$PODS_TARGET_SRCROOT"
+                "$REPO_ROOT/../gradlew" -p "$REPO_ROOT" $KOTLIN_PROJECT_PATH:syncFramework \
+                    -Pkotlin.native.cocoapods.platform=$PLATFORM_NAME \
+                    -Pkotlin.native.cocoapods.archs="$ARCHS" \
+                    -Pkotlin.native.cocoapods.configuration="$CONFIGURATION"
+            SCRIPT
+        }
+    ]
+                
+end

@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3de25b40adab904078b0279aff6ba5dc916217f235a891a95dbd13b040ce1640
-size 625
+package com.ssafy.classserver.jpa.repository;
+
+import com.ssafy.classserver.jpa.entity.ClassRoomEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+
+public interface ClassRoomRepository extends JpaRepository<ClassRoomEntity, UUID> {
+    List<ClassRoomEntity> findAll();
+    Optional<ClassRoomEntity> findById(UUID id);
+
+    Iterable<ClassRoomEntity> findAllByGradeId(UUID gradeId);
+
+    Optional<ClassRoomEntity> findFirstByClassNumAndGradeId(int classNum, UUID gradeId);
+}

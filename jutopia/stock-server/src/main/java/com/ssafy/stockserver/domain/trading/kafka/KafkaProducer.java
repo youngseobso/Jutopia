@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bddcfa9cb5d50fd01c7a513b76ee7cc00af01bc6e21beff606114e2f080e52e8
-size 1223
+//package com.ssafy.stockserver.domain.trading.kafka;
+//
+//import com.fasterxml.jackson.core.JsonProcessingException;
+//import com.fasterxml.jackson.databind.ObjectMapper;
+//import com.ssafy.stockserver.domain.trading.vo.request.RequestTrade;
+//import lombok.extern.slf4j.Slf4j;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.kafka.core.KafkaTemplate;
+//import org.springframework.stereotype.Service;
+//
+//@Service
+//@Slf4j
+//public class KafkaProducer {
+//    private KafkaTemplate<String, String> kafkaTemplate;
+//
+//    @Autowired
+//    public KafkaProducer(KafkaTemplate<String, String> kafkaTemplate) {
+//        this.kafkaTemplate = kafkaTemplate;
+//    }
+//
+//    public RequestTrade send(String topic, RequestTrade trade) {
+//        ObjectMapper mapper = new ObjectMapper();
+//
+//        String jsonInString = "";
+//        try {
+//            jsonInString = mapper.writeValueAsString(trade);
+//        } catch (JsonProcessingException e) {
+//            e.printStackTrace();
+//        }
+//
+//        kafkaTemplate.send(topic, jsonInString);
+//        log.info("Kafka Producer sent data from the Stock Microservice: " + trade);
+//
+//        return trade;
+//    }
+//}

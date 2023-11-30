@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0768b0320d6b19d9febb67bf8dfb5df391e1014ea0f9a052d397a08465427891
-size 733
+package com.ssafy.memberserver.common.exception;
+
+import com.ssafy.memberserver.common.error.ErrorCodeIfs;
+import lombok.Getter;
+@Getter
+public class ApiException extends RuntimeException implements ApiExceptionIfs{
+
+    private final ErrorCodeIfs errorCodeIfs;
+    private final String errorDescription;
+    public ApiException(ErrorCodeIfs errorCodeIfs){
+        super(errorCodeIfs.getDescription());
+        this.errorCodeIfs = errorCodeIfs;
+        this. errorDescription = getErrorCodeIfs().getDescription();
+    }
+    public ApiException(ErrorCodeIfs errorCodeIfs, String errorDescription){
+        super(errorDescription);
+        this.errorCodeIfs = errorCodeIfs;
+        this.errorDescription = errorDescription;
+    }
+
+
+}
+

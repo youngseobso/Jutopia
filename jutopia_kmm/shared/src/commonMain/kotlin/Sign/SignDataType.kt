@@ -1,3 +1,44 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f6ad247b25f2fbc7ac77525ea77ec446aab70595a66f922adccf0e71bb79eee3
-size 868
+package Sign
+
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class LoginInfo(
+    @SerialName("id")
+    val uuid: String,
+    @SerialName("member_id")
+    val id: String,
+    @SerialName("name")
+    val name: String,
+    @SerialName("school")
+    val school: String,
+    @SerialName("grade")
+    val grade: Int,
+    @SerialName("classroom")
+    val classroom: Int,
+    @SerialName("student_number")
+    val studentNumber: Int
+)
+
+@Serializable
+data class LoginResult(
+    @SerialName("result_code")
+    val code: Int
+)
+
+@Serializable
+data class LoginResponseData(
+    @SerialName("result")
+    val result: LoginResult,
+    @SerialName("body")
+    val body: LoginInfo
+)
+
+@Serializable
+data class LoginRequest(
+    @SerialName("member_id")
+    val id: String,
+    @SerialName("member_pwd")
+    val password: String
+)

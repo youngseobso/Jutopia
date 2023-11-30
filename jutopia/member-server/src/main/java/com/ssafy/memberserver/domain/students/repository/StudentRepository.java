@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dca14081fa2a09127ca47a8786dc91ed158edbbccab38af260ff08be9ad1f934
-size 842
+package com.ssafy.memberserver.domain.students.repository;
+
+import com.ssafy.memberserver.common.enums.MemberRole;
+import com.ssafy.memberserver.domain.pointtransaction.entity.PointTransaction;
+import com.ssafy.memberserver.domain.students.entity.Student;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+
+public interface StudentRepository extends JpaRepository<Student, UUID> {
+    Optional<Student> findByStudentId(String studentId);
+    boolean existsByStudentId(String studentId);
+    List<Student> findAllByClassroomId(UUID classroomId);
+    Optional<Student> findByStudentIdAndMemberRole(String studentId, MemberRole memberRole);
+    List<Student> findBySchoolAndGradeAndAndClassRoom(String school, int grade, int classroom);
+
+}

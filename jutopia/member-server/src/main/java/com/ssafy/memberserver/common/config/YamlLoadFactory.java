@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:69a7a6aaa49da26cf57a99c44a8b747cf85a36b9d3a1ab3fe9f2fdba3f7c5c35
-size 1024
+package com.ssafy.memberserver.common.config;
+
+import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.PropertiesPropertySource;
+import org.springframework.core.env.PropertySource;
+import org.springframework.core.io.support.EncodedResource;
+import org.springframework.core.io.support.PropertySourceFactory;
+import org.springframework.stereotype.Component;
+
+import java.io.IOException;
+import java.util.Properties;
+
+@Configuration
+public class YamlLoadFactory implements PropertySourceFactory {
+
+    @Override
+    public PropertySource<?> createPropertySource(String name, EncodedResource resource) throws IOException {
+        YamlPropertiesFactoryBean factory = new YamlPropertiesFactoryBean();
+        factory.setResources(resource.getResource());
+
+        Properties properties = factory.getObject();
+
+        return new PropertiesPropertySource(resource.getResource().getFilename(), properties);
+
+    }
+}

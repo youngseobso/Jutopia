@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0debae162f6d797505841a630ba37462050887ce591a67fc7613240e61d9194a
-size 1003
+package com.aay.compose.donutChart.component
+
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.drawscope.DrawScope
+import androidx.compose.ui.graphics.nativeCanvas
+import androidx.compose.ui.text.ExperimentalTextApi
+import androidx.compose.ui.text.TextMeasurer
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.drawText
+import androidx.compose.ui.unit.IntSize
+
+@OptIn(ExperimentalTextApi::class)
+internal fun DrawScope.drawCenterText(
+    textMeasure: TextMeasurer,
+    centerTitle: String,
+    centerTitleStyle: TextStyle,
+    canvasHeight: Float,
+    canvasWidth: Float,
+    textSize: IntSize
+) {
+    drawContext.canvas.nativeCanvas.apply {
+        drawText(
+            textMeasurer = textMeasure,
+            text = centerTitle.take(10),
+            style = centerTitleStyle,
+            topLeft = Offset(
+                (canvasWidth - textSize.width) / 2f,
+                (canvasHeight - textSize.height) / 2f
+            ),
+        )
+    }
+}
