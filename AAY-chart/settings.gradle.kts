@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:26ffcbde3f9a67ff2722b912b87871fa39814e164a6578a7724b4456ba25549c
-size 705
+pluginManagement {
+    repositories {
+        google()
+        gradlePluginPortal()
+        mavenCentral()
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    }
+
+    plugins {
+        kotlin("multiplatform").version(extra["kotlin.version"] as String)
+        kotlin("android").version(extra["kotlin.version"] as String)
+        id("com.android.application").version(extra["agp.version"] as String)
+        id("com.android.library").version(extra["agp.version"] as String)
+        id("org.jetbrains.compose").version(extra["compose.version"] as String)
+    }
+}
+
+rootProject.name = "AAY-chart"
+
+include(":android", ":desktop", ":common", ":chart")
+includeBuild("convention-plugins")

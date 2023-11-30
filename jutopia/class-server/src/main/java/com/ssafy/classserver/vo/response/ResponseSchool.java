@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:99e2e88743320033a2617192efb5a4081d229a1496e0a77a1e7fc9e9dba08401
-size 591
+package com.ssafy.classserver.vo.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.util.List;
+import java.util.UUID;
+
+@Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@AllArgsConstructor
+@NoArgsConstructor
+public class ResponseSchool {
+    private UUID id;
+    private String schoolName;
+    private String schoolCode;
+    private String region;
+    // 해당 학교의 등록된 학년들을 보여준다
+    private List<ResponseGrade> grades;
+}

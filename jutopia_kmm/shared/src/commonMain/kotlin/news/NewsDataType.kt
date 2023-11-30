@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e1f47e0b03557e7c8364c7899184309b68184cf7f55f670c38c6b382a0bd4f6a
-size 752
+package news
+
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+data class NewsCategory(val idx: Int, val brand: String, val imgSrc: String)
+
+data class NewsDetail(val title: String, val description: String, val publisher: String, val date: String, val time: String, val link: String)
+
+
+
+@Serializable
+data class NewsItem(
+    @SerialName("title")
+    val title: String,
+    @SerialName("link")
+    val link: String,
+    @SerialName("description")
+    val description: String,
+    @SerialName("pubDate")
+    val pubDate: String,
+)
+
+@Serializable
+data class ResponseNewsData(
+    @SerialName("items")
+    val body: List<NewsItem>
+)
+
+@Serializable
+data class RequestSummary(
+    @SerialName("link")
+    val link: String
+)

@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bd19368a46814186080dc14ee221beccc024a1ecabde6040aa16bd251fff47f6
-size 600
+package asset
+
+import androidx.compose.runtime.State
+import androidx.compose.runtime.mutableStateOf
+import moe.tlaster.precompose.stateholder.SavedStateHolder
+import moe.tlaster.precompose.viewmodel.ViewModel
+
+class AssetViewModel(savedStateHolder: SavedStateHolder): ViewModel() {
+    private val _chipIdx = mutableStateOf(savedStateHolder.consumeRestored("chipIdx") as Int? ?: 0)
+
+    val chipIdx: State<Int> = _chipIdx
+
+    init {
+        savedStateHolder.registerProvider("chipIdx") {
+            _chipIdx.value
+        }
+    }
+
+    fun setChipIdx(idx: Int) {
+        _chipIdx.value = idx
+    }
+}

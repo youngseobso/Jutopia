@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0589c0302d6d65ca6ca82ff5293665f6436f895624825e6213cdb67603fe6c7d
-size 557
+package stock.common
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
+
+@Composable
+fun Divider(height:Int = 1) {
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(height.dp)
+            .background(Color.Gray)
+    )
+}

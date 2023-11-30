@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:832f10a98ce1ac1b10d710a3428fa7261f9766fec75517c2a763e01d32df4156
-size 535
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.0.10'
+    id 'io.spring.dependency-management' version '1.1.3'
+}
+
+group = 'com.ssafy'
+version = '0.0.1-SNAPSHOT'
+
+
+
+java {
+    sourceCompatibility = '17'
+}
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+bootJar {
+    enabled = false;
+}
+jar{
+    enabled = false;
+}
+
+dependencies {
+    implementation 'org.springframework.cloud:spring-cloud-starter-bus-amqp:4.0.1'
+    implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:4.0.3'
+}

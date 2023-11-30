@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:16ec88e0baf55a17d1b6f5d1a84a1ca62098a11c02a9840826dbb875024cb4ff
-size 513
+package com.ssafy.memberserver.domain.account.dto.response;
+
+import com.ssafy.memberserver.domain.students.entity.Student;
+import lombok.Builder;
+
+@Builder
+public record ClassRoomListResponse(
+        String studentName,
+        Integer studentNumber
+) {
+    public static ClassRoomListResponse from(Student student){
+        return ClassRoomListResponse.builder()
+                .studentName(student.getStudentName())
+                .studentNumber(student.getStudentNumber())
+                .build();
+    }
+}

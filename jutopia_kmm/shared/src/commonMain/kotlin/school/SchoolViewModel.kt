@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a103442bddce7581a2d28a2b72762309c3e89833ff613ee76d21cdca3e81b6b7
-size 861
+package school
+
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.IO
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.launch
+import moe.tlaster.precompose.viewmodel.ViewModel
+import moe.tlaster.precompose.viewmodel.viewModelScope
+
+class SchoolViewModel: ViewModel() {
+    private val _notice: MutableStateFlow<List<NotiDetail>> = MutableStateFlow(listOf())
+
+    val notice: StateFlow<List<NotiDetail>> = _notice
+
+    private val _isLoading: MutableStateFlow<Boolean> = MutableStateFlow(true)
+
+    val isLoading: StateFlow<Boolean> = _isLoading
+
+    fun fetchData(school: String, grade: Int, classRoom: Int) {
+        viewModelScope.launch(Dispatchers.IO) {
+            _notice.emit(SchoolAPI().getNoti(school, grade, classRoom))
+            _isLoading.emit(false)
+        }
+    }
+}

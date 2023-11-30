@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:edaa8d4b93f9dcf6912cb30c80f139fc42a222d4e6a3e4955fd34928db2b0bd7
-size 595
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+#        native: # 직접적인 파일경로로 설정 파일 불러오는 방법
+#          search-locations: file:///C:/SSAFY/project2/jutopia/config-server/src/main/resources/
+        git:
+          uri: https://github.com/hans0537/jutopia_cloud_config
+          default-label: master
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh

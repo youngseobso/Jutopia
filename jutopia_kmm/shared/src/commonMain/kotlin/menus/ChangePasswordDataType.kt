@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:06bdf93243e59b90662e1b7da9f4797bc6a29adf8c493c5d8ba41ba9463d086a
-size 518
+package menus
+
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+
+@Serializable
+data class ResultInfo(
+    @SerialName("student_update_result")
+    val updateResult: Boolean
+)
+
+@Serializable
+data class ChangeResponseData(
+    @SerialName("body")
+    val body: ResultInfo
+)
+
+@Serializable
+data class ChangeRequest(
+    @SerialName("student_id")
+    val id: String,
+    @SerialName("student_pwd")
+    val password: String,
+    @SerialName("student_new_pwd")
+    val newPassword: String
+)

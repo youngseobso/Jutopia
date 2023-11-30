@@ -1,3 +1,58 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b4e0357667025c0b862070d83e55e6af15a2f70be5e202ac6499b6456951684c
-size 1523
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #1abc9c;
+            border: none;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #16a085;
+        }
+        a {
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+            color: #1abc9c;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<form th:action="@{/teacher/login}" method="post">
+    <input type="text" name="memberId" placeholder="Username">
+    <input type="password" name="memberPwd" placeholder="Password">
+    <button type="submit">로그인</button>
+</form>
+</body>
+</html>

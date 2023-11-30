@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7635f0d54436c0d5c97bb924122a29f44e98d2f23d8c4505c4cf395de040b91b
-size 670
+package com.ssafy.classserver.service;
+
+import com.ssafy.classserver.dto.ProductDto;
+import com.ssafy.classserver.jpa.entity.MemberSavingEntity;
+import com.ssafy.classserver.jpa.entity.SavingProductsEntity;
+import com.ssafy.classserver.vo.request.RequestMemberSaving;
+
+import java.util.Optional;
+import java.util.UUID;
+
+public interface BankService {
+    ProductDto createProduct(ProductDto product);
+
+    Iterable<SavingProductsEntity> getAllProducts(UUID classroomId);
+
+    Optional<SavingProductsEntity> getProduct(UUID productId);
+
+    MemberSavingEntity createMemProduct(MemberSavingEntity request);
+
+    Iterable<MemberSavingEntity> getMemSaving(UUID memberId);
+}

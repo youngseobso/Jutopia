@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ca2aefa3a970e266fde31dc715c139c73b2c726237e8989b80a98b2b688b9d7e
-size 1039
+version: "3.3"
+
+services:
+  mongo1:
+    image: mongo:7.0.1
+    container_name: mongo1
+    restart: always
+    command: mongod --config /etc/mongod.conf --replSet jutopia-repl --bind_ip_all
+    ports:
+      - 27017:27017
+    volumes:
+      - ~/data/mongo/mongo1:/data/db
+      - ./mongod.conf:/etc/mongod.conf
+    networks:
+      - jutopia-network
+
+  mongo2:
+    image: mongo:7.0.1
+    container_name: mongo2
+    restart: always
+    command: mongod --config /etc/mongod.conf --replSet jutopia-repl --bind_ip_all
+    ports:
+      - 27018:27017
+    volumes:
+      - ~/data/mongo/mongo2:/data/db
+      - ./mongod.conf:/etc/mongod.conf
+    networks:
+      - jutopia-network
+
+  mongo3:
+    image: mongo:7.0.1
+    container_name: mongo3
+    restart: always
+    command: mongod --config /etc/mongod.conf --replSet jutopia-repl --bind_ip_all
+    ports:
+      - 27019:27017
+    volumes:
+      - ~/data/mongo/mongo3:/data/db
+      - ./mongod.conf:/etc/mongod.conf
+    networks:
+      - jutopia-network
+
+networks:
+  jutopia-network:
+    external: true

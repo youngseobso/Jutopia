@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8a9966a10bef62df765acbf76ef19e73a650032fbeb2281f9ccdf09d15ce3ff3
-size 862
+package com.aay.compose.donutChart.component
+
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.drawscope.DrawScope
+import androidx.compose.ui.graphics.nativeCanvas
+import androidx.compose.ui.text.ExperimentalTextApi
+import androidx.compose.ui.text.TextMeasurer
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.drawText
+import androidx.compose.ui.text.style.TextOverflow
+
+@OptIn(ExperimentalTextApi::class)
+internal fun DrawScope.ratioText(
+    textMeasurer: TextMeasurer,
+    ratio: Int,
+    textRatioStyle: TextStyle,
+    topLeft: Offset,
+) {
+    drawContext.canvas.nativeCanvas.apply {
+        drawText(
+            textMeasurer = textMeasurer,
+            text = "${ratio}%",
+            style = textRatioStyle,
+            topLeft = topLeft,
+            overflow = TextOverflow.Visible
+        )
+    }
+}

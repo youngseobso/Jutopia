@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cf3040f6d7aad1a39a7a010a901b552c17efdcc031777918a9b19ae047afbdc4
-size 1781
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="18dp"
+    android:viewportWidth="24"
+    android:viewportHeight="18">
+  <path
+      android:pathData="M6.656,16.605H22.664C23.191,16.605 23.613,16.195 23.613,15.668C23.613,15.129 23.191,14.719 22.664,14.719H6.656C6.117,14.719 5.707,15.129 5.707,15.668C5.707,16.195 6.117,16.605 6.656,16.605Z"
+      android:fillColor="#ffffff"
+      android:fillAlpha="0.74"/>
+  <path
+      android:pathData="M1.477,17.145C2.297,17.145 2.953,16.477 2.953,15.668C2.953,14.848 2.297,14.191 1.477,14.191C0.656,14.191 0,14.848 0,15.668C0,16.477 0.656,17.145 1.477,17.145Z"
+      android:fillColor="#ffffff"
+      android:fillAlpha="0.74"/>
+  <path
+      android:pathData="M6.656,9.527H22.664C23.191,9.527 23.613,9.105 23.613,8.578C23.613,8.051 23.191,7.641 22.664,7.641H6.656C6.117,7.641 5.707,8.051 5.707,8.578C5.707,9.105 6.117,9.527 6.656,9.527Z"
+      android:fillColor="#ffffff"
+      android:fillAlpha="0.74"/>
+  <path
+      android:pathData="M1.477,10.055C2.297,10.055 2.953,9.398 2.953,8.578C2.953,7.758 2.297,7.102 1.477,7.102C0.656,7.102 0,7.758 0,8.578C0,9.398 0.656,10.055 1.477,10.055Z"
+      android:fillColor="#ffffff"
+      android:fillAlpha="0.74"/>
+  <path
+      android:pathData="M6.656,2.438H22.664C23.191,2.438 23.613,2.027 23.613,1.5C23.613,0.961 23.191,0.551 22.664,0.551H6.656C6.117,0.551 5.707,0.961 5.707,1.5C5.707,2.027 6.117,2.438 6.656,2.438Z"
+      android:fillColor="#ffffff"
+      android:fillAlpha="0.74"/>
+  <path
+      android:pathData="M1.477,2.965C2.297,2.965 2.953,2.309 2.953,1.5C2.953,0.68 2.297,0.023 1.477,0.023C0.656,0.023 0,0.68 0,1.5C0,2.309 0.656,2.965 1.477,2.965Z"
+      android:fillColor="#ffffff"
+      android:fillAlpha="0.74"/>
+</vector>

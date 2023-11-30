@@ -1,3 +1,103 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b2f6588b62db828f596252e9232197cdbae0c1e50238410c5dc94ba76f71f1d6
-size 3205
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        form, h1 {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 40%; /* 변경된 부분 */
+            margin-bottom: 20px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, button, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #1abc9c;
+            border: none;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #16a085;
+        }
+    </style>
+</head>
+<body>
+<!--<h1>Welcome to the Dashboard!</h1>-->
+<h1 th:text="|Welcome to ${session.user.school} Dashboard!|">Welcome to the Dashboard!</h1>
+
+<div class="grid">
+    <form th:action="@{/teacher/createSeat}" method="post">
+        <h2>좌석 생성</h2>
+        <label>총 좌석 수:</label>
+        <input type="number" name="totalCount" required>
+        <label>학년:</label>
+        <input type="number" name="grade" required>
+        <label>반:</label>
+        <input type="number" name="clazzNumber" required>
+        <button type="submit">생성</button>
+    </form>
+
+    <form th:action="@{/teacher/createProduct}" method="post">
+        <h2>적금 상품 생성</h2>
+        <label>상품명:</label>
+        <input type="text" name="productName" required>
+        <label>상세 내용:</label>
+        <input type="text" name="productDetail" required>
+        <label>최소 금액:</label>
+        <input type="number" name="minMoney" required>
+        <label>최대 금액:</label>
+        <input type="number" name="maxMoney" required>
+        <label>이자율:</label>
+        <input type="number" name="interestRate" required>
+        <label>약관:</label>
+        <input type="number" name="term" required>
+        <button type="submit">생성</button>
+    </form>
+
+    <form th:action="@{/teacher/createNotice}" method="post">
+        <h2>공지사항 생성</h2>
+        <label>제목:</label>
+        <input type="text" name="title" required>
+        <label>내용:</label>
+        <textarea name="content" rows="5" required></textarea>
+        <button type="submit">공지</button>
+    </form>
+
+    <form th:action="@{/teacher/providePoints}" method="post">
+        <h2>포인트 일괄 지급</h2>
+        <label>금액:</label>
+        <input type="number" name="points" required>
+        <button type="submit">지급</button>
+    </form>
+</div>
+</body>
+</html>

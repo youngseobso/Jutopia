@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2054632a8b7d6d76bf0d4f355bcbdd6170b560aea647d2395b0deb97528cf7aa
-size 601
+package com.ssafy.memberserver.domain.students.client;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import java.util.UUID;
+
+@FeignClient(name="class-server")
+public interface ClassServerClient {
+
+    @GetMapping("/class-server/api/school/{schoolName}/{grade}/{classNum}")
+    UUID getClassroomId(@PathVariable("schoolName") String schoolName,
+                        @PathVariable("grade") int grade,
+                        @PathVariable("classNum") int classNum);
+}

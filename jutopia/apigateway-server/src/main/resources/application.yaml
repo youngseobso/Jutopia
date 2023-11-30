@@ -1,3 +1,88 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5e5d5b301d831355c6d7a35ddcc05ad46fde20a8d41aae3792b30e777b280445
-size 2102
+server:
+  port: 8000
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+spring:
+  application:
+    name: apigateway-server
+
+  # rabbitmq 연동 (포트번호: 5672)
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    gateway:
+      ssl:
+        key-store: classpath:ssl/keystore.p12
+        key-store-type: PKCS12
+        key-password: juto
+        key-store-password: juto
+      routes:
+        - id: member-server
+          uri: lb://MEMBER-SERVER
+          predicates:
+            - Path=/member-server/**
+        - id: class-server
+          uri: lb://CLASS-SERVER
+          predicates:
+            - Path=/class-server/**
+        - id: news-server
+          uri: lb://NEWS-SERVER
+          predicates:
+            - Path=/news-server/**
+          filters:
+            - RewritePath=/news-server/(?<segment>.*), /$\{segment}
+        - id: rent-server
+          uri: lb://RENT-SERVER
+          predicates:
+            - Path=/rent-server/**
+        - id: chat-server
+          uri: lb://CHAT-SERVER
+          predicates:
+            - Path=/chat-server/**
+          filters:
+            - RewritePath=/chat-server/(?<segment>.*), /$\{segment}
+        - id: stock-server
+          uri: lb://STOCK-SERVER
+          predicates:
+            - Path=/stock-server/**
+        - id: teacher
+          uri: lb://teacher
+          predicates:
+            - Path=/teacher/**
+
+#springdoc:
+#  enable-native-support: true
+#  api-docs:
+#    enabled: true
+#  swagger-ui:
+#    enabled: true
+#    path: /swagger-ui.html
+#    config-url: /v3/api-docs/swagger-config
+#    urls:
+#      - url: /class-server/v3/api-docs
+#        name: class-server
+#      - url: /member-server/v3/api-docs
+#        name: member-server
+#      - url: /rent-server/v3/api-docs
+#        name: rent-server
+#      - url: /stock-server/v3/api-docs
+#        name: stock-server
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, httpexchanges, busrefresh, gateway
+
+
+
+

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d0f1114693d9de220f4c39fdd8facd14cacbfc0ef9e72cac41eaa26ec4b11bff
-size 704
+package com.ssafy.stockserver.domain.trading.service;
+
+import com.ssafy.stockserver.domain.trading.entity.Trading;
+import com.ssafy.stockserver.domain.trading.repository.TradingRepository;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+@Slf4j
+public class TradingServiceImpl implements TradingService{
+
+    TradingRepository tradingRepository;
+
+    @Autowired
+    public TradingServiceImpl(TradingRepository tradingRepository) {
+        this.tradingRepository = tradingRepository;
+    }
+
+    @Override
+    public Trading save(Trading trade) {
+        return tradingRepository.save(trade);
+    }
+}

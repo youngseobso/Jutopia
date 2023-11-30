@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b69beca8f9587b7dc49b41a03c8515d32a93199d39bdc88bb9a3924e6d988d51
-size 526
+package com.ssafy.memberserver.domain.students.dto.request;
+
+import com.ssafy.memberserver.common.enums.MemberStatus;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Getter;
+
+@Getter
+public class StudentDeleteRequest{
+        @Schema(description = "학생 아이디")
+        private String studentId;
+
+        @Schema(description = "학생 비밀 번호")
+        private String studentPwd;
+
+        @Schema(description = "학생 탈퇴 여부")
+        private MemberStatus memberStatus;
+}

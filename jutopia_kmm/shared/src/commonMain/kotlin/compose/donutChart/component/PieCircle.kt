@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2a31f20fd8b5c2a88d4e2180c525b76e2a5a30c021de6f396d4fffdde4aa0d63
-size 520
+package com.aay.compose.donutChart.component
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.drawscope.DrawScope
+import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.unit.dp
+
+internal fun DrawScope.draPieCircle(
+    circleColor: Color,
+    radiusRatioCircle: Float
+) {
+    drawCircle(
+        color = circleColor,
+        radius = radiusRatioCircle,
+        style = Stroke(1.dp.toPx(), cap = StrokeCap.Round)
+    )
+}

@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:102906d15bd8c8cf0281f332a24aef62fe4c024b64748b3f51d6a8761a63af2d
-size 1476
+//package com.ssafy.stockserver.domain.trading.kafka;
+//
+//import org.apache.kafka.clients.producer.ProducerConfig;
+//import org.apache.kafka.common.serialization.StringSerializer;
+//import org.springframework.context.annotation.Bean;
+//import org.springframework.context.annotation.Configuration;
+//import org.springframework.kafka.annotation.EnableKafka;
+//import org.springframework.kafka.core.DefaultKafkaProducerFactory;
+//import org.springframework.kafka.core.KafkaTemplate;
+//import org.springframework.kafka.core.ProducerFactory;
+//
+//import java.util.HashMap;
+//import java.util.Map;
+//
+//// 카프카 사용 빈
+//@EnableKafka
+//@Configuration
+//public class KafkaProducerConfig {
+//
+//    @Bean
+//    public ProducerFactory<String, String> producerFactory() {
+//        Map<String, Object> properties = new HashMap<>();
+//        // 접속하고자 하는 정보 등록
+//        properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "172.18.0.7:19092");
+//        // key 직렬화
+//        properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+//        // value 직렬화
+//        properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+//
+//
+//        return new DefaultKafkaProducerFactory<>(properties);
+//    }
+//
+//    @Bean
+//    // 전달할 인스턴스 처리
+//    public KafkaTemplate<String, String> kafkaTemplate() {
+//        return new KafkaTemplate<>(producerFactory());
+//    }
+//}

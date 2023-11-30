@@ -1,3 +1,48 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:69f7c33605b3a70d122c65385062d0ed07df0fed1f787a3a8a36d656251492b8
-size 1177
+services:
+  config-server:
+    image: config-server:1.0
+    container_name: config-server
+    ports:
+      - "8888:8888"
+    environment:
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_PROFILES_ACTIVE: default
+    networks:
+      - jutopia-network
+  discovery-server:
+    image: discovery-server:1.0
+    container_name: discovery-server
+    ports:
+      - "8761:8761"
+    environment:
+      - spring.cloud.config.uri=http://config-server:8888
+    networks:
+      - jutopia-network
+    depends_on:
+      - config-server    
+  apigateway-server:
+    image: apigateway-server:1.0
+    container_name: apigateway-server
+    ports:
+      - "8000:8000"
+    environment:
+      SPRING_CLOUD_CONFIG_URI: http://config-server:8888
+      SPRING_RABBITMQ_HOST: rabbitmq
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-server:8761/eureka/
+    networks:
+      - jutopia-network
+  news-server:
+    build:
+      context: ../../news-server
+      dockerfile: Dockerfile
+    container_name: news-server
+    ports:
+      - "9001:9001"
+    networks:
+      - jutopia-network
+  # jenkins/jenkins:
+  #   image: jenkins/jenkins:lts-jdk17
+
+networks:
+  jutopia-network:
+    external: true

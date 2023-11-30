@@ -1,3 +1,113 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4b410fa44a96981bd5e191b1e8d4a5ba757eaad097edc911cf866ae76204c789
-size 3118
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.0.10'
+    id 'io.spring.dependency-management' version '1.1.3'
+}
+
+group = 'com.ssafy'
+version = '1.0'
+
+java {
+    sourceCompatibility = '17'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    set('springCloudVersion', "2022.0.4")
+}
+
+dependencies {
+    //Spring boot
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    //spring cloud
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+
+    //lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    //h2
+    runtimeOnly 'com.h2database:h2'
+
+    // jpa
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // jdbc
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+
+    // validation
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // thymeleaf & web
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-web-services'
+
+    //mysql
+    runtimeOnly 'com.mysql:mysql-connector-j'
+    implementation 'mysql:mysql-connector-java:8.0.17'
+
+    //test
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // cloud config
+    implementation 'org.springframework.cloud:spring-cloud-starter-config'
+    implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
+
+    // actuator
+//    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    // feign client
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+    // bus
+    implementation 'org.springframework.cloud:spring-cloud-starter-bus-amqp'
+
+    // ModelMapper
+    implementation 'org.modelmapper:modelmapper:2.3.8'
+
+    // Api 규격
+    implementation project(':common')
+
+    // swagger
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
+
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+    implementation "io.jsonwebtoken:jjwt-api:0.11.5"
+    runtimeOnly "io.jsonwebtoken:jjwt-impl:0.11.5"
+    implementation "io.jsonwebtoken:jjwt-jackson:0.11.5"
+
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    testImplementation 'org.springframework.security:spring-security-test'
+
+    // kafka
+    implementation 'org.springframework.kafka:spring-kafka'
+
+    // Feign Client
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

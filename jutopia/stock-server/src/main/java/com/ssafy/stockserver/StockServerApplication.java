@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9f6c5814da963819324745e355e0360727e7518b81281ddbf60c19fe8a3f2d88
-size 900
+package com.ssafy.stockserver;
+
+import feign.Logger;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
+
+@SpringBootApplication
+@EnableDiscoveryClient
+@EnableFeignClients // Feign client
+public class StockServerApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(StockServerApplication.class, args);
+    }
+    @Bean
+    // Feign 관련 로그출력하기 위한 bean 등록
+    public Logger.Level feignLoggerLevel() {
+        return Logger.Level.FULL; // 모든 레벨 등록
+    }
+
+}

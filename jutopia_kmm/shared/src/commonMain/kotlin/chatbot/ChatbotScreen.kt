@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:43c9e4141bd5b8e9fe091634c91672effe2124ce9b41b9b39fdeb6f1c632b65b
-size 667
+package chatbot
+
+import BottomTabBar
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.padding
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import common.TopPageBar
+import moe.tlaster.precompose.navigation.Navigator
+
+@Composable
+fun ChatbotScreen(navigator: Navigator) {
+    Column(modifier = Modifier.padding(bottom = 70.dp).fillMaxHeight()) {
+        TopPageBar("챗봇", navigator = navigator)
+        ChatbotPage()
+    }
+    BottomTabBar(navigator, 0)
+}
+

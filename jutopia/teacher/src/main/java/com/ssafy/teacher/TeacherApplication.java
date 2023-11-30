@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0e1e848cfdc0fa851b99343f53c9337ad748a9daa6f3f9f85de21acc2c9b447a
-size 621
+package com.ssafy.teacher;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.Import;
+
+@SpringBootApplication
+@EnableFeignClients
+@EnableDiscoveryClient
+@Import(com.ssafy.common.objectmapper.ObjectMapperConfig.class)
+public class TeacherApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(TeacherApplication.class, args);
+    }
+
+}
